@@ -1,0 +1,54 @@
+// Fonts
+$base-font-stack: (
+  poppins: (
+    regular: (
+      family: ('Poppins', sans-serif),
+      weight: 400,
+      style: normal
+    ),
+    semi-bold: (
+      family: ('Poppins', sans-serif),
+      weight: 600,
+      style: italic
+    ),
+    semi-bold-italic: (
+      family: ('Poppins', sans-serif),
+      weight: 600,
+      style: italic
+    ),
+    extra-bold: (
+      family: ('Poppins', sans-serif),
+      weight: 800,
+      style: normal
+    ),
+  ),
+
+  // Serif
+  georgia: (
+    regular: (
+      family: (Georgia, Times, Times New Roman, serif),
+      weight: 400,
+      style: normal
+    ),
+    regular-italic: (
+      family: (Georgia, Times, Times New Roman, serif),
+      weight: 400,
+      style: italic
+    ),
+  )
+);
+
+@mixin font($group, $variant: regular, $properties: family weight style, $font-stack: $base-font-stack) {
+  $font-properties: map-deep-get($font-stack, $group, $variant);
+  
+  @if $font-properties {
+    @each $property, $values in $font-properties {
+      @if contains($properties, $property) {
+        font-#{$property}: map-get($font-properties, $property);
+      }
+    }
+  }
+}
+
+// Colors
+$primary-color: #0a0a0a;
