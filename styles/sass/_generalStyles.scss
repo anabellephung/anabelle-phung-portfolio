@@ -3,7 +3,11 @@ html {
 }
 
 body {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='45' height='54' viewport='0 0 100 100' style='fill:black;font-size:27px;filter:sepia(65%)'><text y='50%'>⭐</text></svg>") 16 0,auto;
+  font-family: $body-font-stack;
   font-size: 1.6rem;
+  background: $primary-dark;
+  color: $primary-light;
 }
 
 .wrapper {
@@ -15,4 +19,10 @@ body {
 header,
 section {
   min-height: 100vh;
+}
+
+input[type="submit"],
+button,
+a {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='45' height='54' viewport='0 0 100 100' style='fill:black;font-size:27px;filter:sepia(65%)'><text y='50%'>✨</text></svg>") 16 0,auto;
 }

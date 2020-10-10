@@ -1,3 +1,167 @@
 header {
-  background: url(assets/placeholderPineappleForProfilePic.jpg);
+  display: flex;
+
+  .wrapper {
+    min-height: 100vh;
+    @include flex-center
+  }
+  
+  .headerContents {
+    font-family: $heading-font-stack;
+    letter-spacing: 5px;
+    @include flex-center;
+    flex-direction: column;
+
+    .circleFrame {
+      width: 250px;
+      height: 250px;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      border: 0.5px solid $primary-dark;
+      border-radius: 50%;
+      filter: sepia(50%);
+    }
+
+    a {
+      background: $accent-color;
+      color: $primary-light;
+      border: 1px solid $accent-color;
+      border-radius: 5px;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+  }
 }
+
+.hamburger {
+  display: none;
+}
+
+nav {
+  min-height: 100vh;
+  min-width: 30vh;
+  @include flex-center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(assets/placeholderPineappleForProfilePic.jpg) no-repeat 75%;
+    background-size: cover;
+    filter: sepia(40%);
+  }
+  
+  ul {
+    letter-spacing: 1px;
+    border: 0.5px solid $primary-dark;
+    box-shadow: 5px 5px 5px $primary-dark;
+    text-align: center;
+    margin-left: 100px;
+    position: absolute;
+  }
+
+  li {
+    text-transform: lowercase;
+    border-bottom: 0.1px solid $primary-dark;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  a {
+    font-size: 1.3rem;
+    background: $primary-light;
+    color: $primary-dark;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 5px;
+    transition: background 0.3s ease-in-out;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      background: $accent-color;
+    }
+
+    .icon {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+h1 {
+  font-weight: $extra-bold;
+  font-size: clamp(5rem, 3vw, 7.5rem);
+  text-align: center;
+
+  span {
+    color: $accent-color;
+  }
+}
+
+p {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-weight: $semi-bold;
+  margin-bottom: 35px;
+
+  span {
+    font-style: italic;
+
+     &::before {
+      content: 'developer';
+      animation: change infinite 3s;
+    }
+
+    @keyframes change {
+      0% {
+        content: 'developer';
+      }
+
+      50% {
+        content: 'female';
+      }
+
+      75% {
+        content: 'developer';
+      }
+    }
+  }
+}
+
+.shutterOutTransition {
+  transition: color 300ms;
+  position: relative;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    background: $primary-dark;
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition: 300ms ease-out;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: scaleX(1);
+  }  
+}    

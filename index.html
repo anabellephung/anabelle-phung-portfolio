@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./styles/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./styles/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./styles/assets/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./styles/assets/favicon_io/site.webmanifest">
+  <script src="https://kit.fontawesome.com/ad4f31f59a.js" crossorigin="anonymous"></script>
   <link
-    href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&family=Poppins:ital,wght@0,400;0,800;1,600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&family=Poppins:ital,wght@0,400;0,600;0,800;1,600&display=swap"
     rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>This is Anabelle Phung.</title>
@@ -15,24 +16,59 @@
 </head>
 <body>
   <header>
+    <nav role="navigation">
+      <button class="hamburger hamburger--collapse" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <ul>
+        <li>
+          <a href="#">
+            <span class="fas fa-home icon" aria-label="Homepage"></span>
+            <span class="noMobile">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fas fa-female icon" aria-label="About Me Page"></span>
+            <span class="noMobile">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fas fa-file icon" aria-label="Experience Page"></span>
+            <span class="noMobile">Resume</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fas fa-briefcase icon" aria-label="Projects Page"></span>
+            <span class="noMobile">Projects</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fas fa-envelope-open icon" aria-label="Contact Page"></span>
+            <span class="noMobile">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <div class="wrapper">
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Resume</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
       <div class="headerContents">
-        <h1>Anabelle Phung</h1>
-        <p>I'm a developer</p>
-        <a href="./assets/anabelle-phung-resume.pdf">
-          Checkout CV
+        <div class="circleFrame">
+          <img src="./styles/assets/placeholderBellePic.jpg" alt="Another pineapple">
+        </div>
+        <h1>Anabelle<span> Phung</span></h1>
+        <p>I am a <span></span></p>
+        <a href="./styles/assets/anabelle-phung-resume.pdf" class="shutterOutTransition">
+          <span class="fas fa-download" aria-label="Download"></span> CV
         </a>
       </div>
-    </div>  
+    </div>
   </header>
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src="./script.js"></script>
 </body>
 </html>

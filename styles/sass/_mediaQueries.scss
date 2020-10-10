@@ -1,0 +1,70 @@
+@media (max-width: 900px) {
+  header {
+    display: block;
+
+    .wrapper {
+      min-height: 85vh;
+    }
+  }
+
+  nav {
+    min-width: 0;
+    min-height: 15vh;
+
+    &::before {
+      background-position: 65%;
+    }
+
+    ul {
+      margin-left: 0;
+      @include flex-center;
+    }
+
+    li {
+      border-bottom: none;
+    }
+
+    a {
+      padding: 5px 15px;
+    }
+  }
+}
+@media (max-width: 690px) {
+  nav {
+    .noMobile {
+      display: none;
+    }
+
+    a {
+      padding: 10px 20px;
+
+      .icon {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  header {
+    .hamburger {
+      display: block;
+    }
+
+    nav {
+      display: block;
+    }
+
+    ul {
+      display: none;
+    }
+
+    li {
+      border-bottom: 0.5px solid $primary-dark;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}
