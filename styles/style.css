@@ -557,6 +557,12 @@ nav .hamburger {
   display: none;
 }
 
+nav .menuToggle {
+  display: block;
+  position: fixed;
+  z-index: 20;
+}
+
 nav ul {
   letter-spacing: 1px;
   border: 0.5px solid #0a0a0a;
@@ -837,6 +843,17 @@ form button {
 @media (max-width: 690px) {
   nav .noMobile {
     display: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   nav a {
     padding: 10px 20px;

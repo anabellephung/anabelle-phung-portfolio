@@ -24,6 +24,12 @@ nav {
   .hamburger {
     display: none;
   }
+
+  .menuToggle {
+    display: block;
+    position: fixed;
+    z-index: 20;
+  }
   
   ul {
     letter-spacing: 1px;

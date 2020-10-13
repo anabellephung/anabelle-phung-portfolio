@@ -49,6 +49,10 @@
       display: none;
     }
 
+    ul {
+      @include flex-center-row;
+    }
+
     a {
       padding: 10px 20px;
 
