@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="apple-touch-icon" sizes="180x180" href="./styles/assets/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./styles/assets/favicon_io/favicon-32x32.png">
@@ -9,11 +10,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&family=Poppins:ital,wght@0,400;0,600;0,800;1,600&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>This is Anabelle Phung.</title>
   <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
   <header>
     <nav role="navigation">
@@ -58,23 +61,54 @@
   </header>
 
   <main>
-    <section class="home">
+    <section class="contact">
       <div class="wrapper">
-        <div class="homepageContents">
-          <div class="circleFrame">
-            <img src="./styles/assets/placeholderBellePic.jpg" alt="Another pineapple">
-          </div>
-          <h1>Anabelle<span> Phung</span></h1>
-          <p>I am a <span></span></p>
-          <a href="./styles/assets/anabelle-phung-resume.pdf" class="shutterOutTransition">
-            <span class="fas fa-download" aria-label="Download"></span> CV
-          </a>
+        <h2>Contact Me</h2>
+        <div class="container">
+          <ul class="socials">
+            <li>
+              <a href="https://github.com/anabellephung" target="_blank">
+                <span class="devicon-github-plain" aria-label="github"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/anabelle-phung/" target="_blank">
+                <span class="devicon-linkedin-plain" aria-label="linkedin"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/anabananacodes" target="_blank">
+                <span class="devicon-twitter-plain" aria-label="twitter"></span>
+              </a>
+            </li>
+          </ul>
+          
+          <form action="https://getsimpleform.com/messages?form_api_token=6b6c3f456b74658949303d16f336bc7b" method="POST">
+            <ul>
+              <li>
+                <label for="_replyto">Your E-mail:</label>
+                <input type="text" id="_replyto" name="_replyto">
+              </li>
+              <li>
+                <label for="message">Write a Message:</label>
+                <textarea id="message" name="message"></textarea>
+              </li>
+              <li>
+                <button id="send" type="submit" class="shutterOutTransition">Send</button>
+              </li>
+              <li>
+                <input type="hidden" name="redirect_to" value="http://anabananabelle.ca/" />
+              </li>
+            </ul>
+          </form>
+
         </div>
       </div>
     </section>
   </main>
-
-  <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+    integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
   <script src="./script.js"></script>
 </body>
 </html>

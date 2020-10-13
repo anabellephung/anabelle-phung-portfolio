@@ -1,0 +1,73 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a {
+    font-size: 4rem;
+    padding: 20px;
+    margin: 0 40px;
+    display: inline-flex;
+    border: 5px double $primary-dark;
+    border-radius: 50%;
+    color: $primary-light;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $accent-color;
+      color: $primary-dark;
+    }
+  }
+}
+
+form {
+  min-width: 500px;
+  padding: 20px;
+  border: 5px double $primary-light;
+  border-radius: 5px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  label {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    letter-spacing: 10px;
+    display: inline-block;
+  }
+
+  input,
+  textarea {
+    min-width: 400px;
+    letter-spacing: 5px;
+    padding: 5px;
+    border: 3px double $primary-dark;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: $accent-color;
+  }
+
+  textarea {
+    vertical-align: top;
+    height: 10rem;
+    resize: none;
+  }
+
+  button {
+    letter-spacing: 5px;
+    margin-top: 15px;
+  }
+}
+

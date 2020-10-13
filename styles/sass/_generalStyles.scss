@@ -8,21 +8,76 @@ body {
   font-size: 1.6rem;
   background: $primary-dark;
   color: $primary-light;
+  display: flex;
 }
 
 .wrapper {
   max-width: 1280px;
   width: 85%;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
-header,
-section {
-  min-height: 100vh;
+section, .wrapper {
+  min-width: 75vw;
+}
+
+.container {
+  min-height: 90vh;
 }
 
 input[type="submit"],
 button,
 a {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='45' height='54' viewport='0 0 100 100' style='fill:black;font-size:27px;filter:sepia(65%)'><text y='50%'>✨</text></svg>") 16 0,auto;
+}
+
+.homepageContents a,
+form button {
+  background: $accent-color;
+  color: $primary-light;
+  border: 1px solid $accent-color;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.shutterOutTransition {
+  transition: color 300ms;
+  position: relative;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    background: $primary-dark;
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition: 300ms ease-out;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: scaleX(1);
+  }  
+}  
+
+h2 {
+  font-size: clamp(3.5rem, 3vw, 5.5rem);
+  letter-spacing: 7px;
+  text-align: center;
+  padding-top: 20px;
+  min-height: 10vh;
+}
+
+.container {
+  @include flex-center-column-even;
 }

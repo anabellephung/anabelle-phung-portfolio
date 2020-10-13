@@ -1,10 +1,12 @@
 @media (max-width: 900px) {
-  header {
-    display: block;
+  body {
+    flex-direction: column;
+  }
 
-    .wrapper {
-      min-height: 85vh;
-    }
+  header {
+    min-width: 100%;
+    min-height: 15vh;
+    display: block;
   }
 
   nav {
@@ -17,7 +19,7 @@
 
     ul {
       margin-left: 0;
-      @include flex-center;
+      @include flex-center-row;
     }
 
     li {
@@ -27,6 +29,18 @@
     a {
       padding: 5px 15px;
     }
+  }
+
+  section, .wrapper {
+    min-height: 85vh;
+  }
+
+  section {
+    min-width: 100vw;
+  }
+
+  .container {
+    min-height: 75vh;
   }
 }
 @media (max-width: 690px) {
@@ -41,6 +55,15 @@
       .icon {
         font-size: 2.5rem;
       }
+    }
+  }
+
+  form {
+    min-width: 400px;
+
+    input,
+    textarea {
+      min-width: 300px;
     }
   }
 }
@@ -62,9 +85,35 @@
     li {
       border-bottom: 0.5px solid $primary-dark;
 
+      a {
+        padding: 5px 20px;
+      }
+
       &:last-of-type {
         border-bottom: none;
       }
+    }
+  }
+
+  .socials a {
+    margin: 20px 10px;
+  } 
+
+  form {
+    min-width: 300px;
+
+    li {
+      align-items: center;
+    }
+
+    label {
+      letter-spacing: 8px;
+    }
+
+    input,
+    textarea {
+      min-width: 200px;
+      width: 100px;
     }
   }
 }
