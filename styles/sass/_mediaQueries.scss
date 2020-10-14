@@ -42,6 +42,10 @@
   .container {
     min-height: 75vh;
   }
+
+  .projects ul {
+    flex-direction: column;
+  }
 }
 @media (max-width: 690px) {
   nav {

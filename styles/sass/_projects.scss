@@ -1,0 +1,28 @@
+.projects {
+  ul {
+    min-width: 75vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrap {
+    min-height: 75vh;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .box {
+      width: 250px;
+      height: 200px;
+      border: 1px solid;
+      text-align: center;
+    }
+  }
+}
