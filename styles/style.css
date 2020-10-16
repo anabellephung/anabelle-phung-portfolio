@@ -371,7 +371,7 @@ form button {
 }
 
 h2 {
-  font-size: clamp(3.5rem, 3vw, 5.5rem);
+  font-size: clamp(3rem, 3vw, 5rem);
   letter-spacing: 7px;
   text-align: center;
   padding-top: 20px;
@@ -698,7 +698,7 @@ nav a .icon {
 
 .home .homepageContents img {
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   position: absolute;
   border-radius: 5px;
 }
@@ -707,7 +707,6 @@ h1 {
   font-weight: 800;
   font-size: clamp(3rem, 6vw, 6rem);
   text-align: center;
-  margin-top: 10px;
 }
 
 h1 span {
@@ -754,18 +753,7 @@ p .wordChange::before {
   }
 }
 
-.projects ul {
-  min-width: 75vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.projects .wrap {
-  min-height: 75vh;
+.about .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -773,173 +761,188 @@ p .wordChange::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.projects .wrap:first-of-type {
-  margin-right: 50px;
-}
-
-.projects li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.projects li .box {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
-  width: 350px;
-  height: auto;
-  border-radius: 5px;
-  text-align: center;
+.about .wrapper li {
+  margin-bottom: 20px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: 2px;
 }
 
-#myImg {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.about .wrapper li:last-child {
+  position: relative;
 }
 
-#myImg:hover {
-  opacity: 0.7;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.77);
-  /* Black w/ opacity */
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  border-radius: 5px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content {
-  -webkit-animation-name: zoom;
-          animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f0f0;
-  font-size: 40px;
-  font-weight: bold;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
+.about .color {
   color: #e68080e8;
-  text-decoration: none;
-  cursor: pointer;
+}
+
+.about .italic {
+  font-style: italic;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 4px;
+  overflow-y: scroll;
+  max-height: 225px;
+  background: #ffc3c3f0;
+  margin: 0 10px;
+  border: 5px double #0a0a0a;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin: 8px 0;
+  vertical-align: middle;
+  height: 24%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.pineapple {
+  font-size: clamp(2.5rem, 3vw, 4.5rem);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: swayingPineapple 4s linear infinite;
+  animation: swayingPineapple 4s linear infinite;
+}
+
+.pineapple:hover,
+.pineapple:focus {
+  font-size: clamp(2.8rem, 3vw, 4.8rem);
+  text-shadow: 2px 2px #ffc0cb;
+}
+
+@-webkit-keyframes swayingPineapple {
+  0% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  25% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes swayingPineapple {
+  0% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  25% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
 }
 
 .ImgThumbnail {
   border-radius: 5px;
-  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   height: 250px;
-  width: 250px;
+  width: 350px;
 }
 
-.ImgThumbnail:nth-of-type(1) {
-  margin-left: 20%;
+.box {
+  min-height: 90vh;
+  min-width: 75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .modal {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.77);
 }
 
 .modalImage {
-  margin: auto;
   display: block;
-  width: 50%;
-  height: 60%;
-  max-width: 700px;
+  border-radius: 5px;
 }
 
 #caption {
-  margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+}
+
+h3 {
+  font-size: clamp(2.6rem, 3vw, 4.6rem);
   text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  margin-bottom: 10px;
+  text-transform: full-width;
 }
 
 .close {
@@ -955,7 +958,7 @@ p .wordChange::before {
 
 .close:hover,
 .close:focus {
-  color: red;
+  color: #e68080e8;
   cursor: pointer;
 }
 
@@ -1132,17 +1135,11 @@ form button {
   .container {
     min-height: 75vh;
   }
-  .projects ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .projects .wrap {
-    min-height: 0;
-  }
-  .projects .wrap:first-of-type {
-    margin-right: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .modalImage {
+    width: 100%;
   }
 }
 
@@ -1167,29 +1164,12 @@ form button {
   nav a .icon {
     font-size: 2.5rem;
   }
-  .modal-content {
-    width: 100%;
-  }
   form {
     min-width: 400px;
   }
   form input,
   form textarea {
     min-width: 300px;
-  }
-}
-
-@media (max-width: 600px) {
-  .modal {
-    width: auto;
-    height: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -1236,5 +1216,11 @@ form button {
   form textarea {
     min-width: 200px;
     width: 100px;
+  }
+}
+
+@media (max-width: 375px) {
+  .pineapple {
+    right: -10px;
   }
 }

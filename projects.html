@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./styles/assets/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="./styles/assets/favicon_io/site.webmanifest">
   <script src="https://kit.fontawesome.com/ad4f31f59a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&family=Poppins:ital,wght@0,400;0,600;0,800;1,600&display=swap"
     rel="stylesheet">
@@ -61,52 +62,84 @@
     <section class="projects">
       <div class="wrapper">
         <h2>Projects</h2>
-        <div class="container">
-          <ul>
-            <div class="wrap">
-              <li>
-                <h3>Skincare Regime Quiz</h3>
-                <div class="box">
-                  <img class="thumbnail" src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif" alt="Video of skincare regime quiz">
-                  <div id="modal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modalImage" id="img01">
-                    <div id="caption"></div>
-                  </div>
-                </div>
-              </li>
-              <!-- <li>
-                <h3>Top 10 Food Cities in the World</h3>
-                <div class="box">
-                </div>
-              </li> -->
-            </div>
-            <div class="wrap">
-              <li>
-                <h3>Come Wine Down</h3>
-                <div class="box">
-                  <img class="thumbnail" src="./styles/assets/projectCaptures/comeWineDown.gif" alt="Video of come wine down app">
-                  <div id="modal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modalImage" id="img01">
-                    <div id="caption"></div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <h3>Giphy Sentiment</h3>
-                <div class="box">
-                  <img class="thumbnail" src="./styles/assets/projectCaptures/giphySentiment.gif" alt="Video of giphy sentiment app">
-                  <div id="modal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modalImage" id="img01">
-                    <div id="caption"></div>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </ul>
+
+        <div class="box">
+          <img class="ImgThumbnail" src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif" alt="Skincare Regime Quiz"/>
+          <img class="ImgThumbnail" src="./styles/assets/projectCaptures/comeWineDown.gif" alt="Come Wine Down"/>
+          <img class="ImgThumbnail" src="./styles/assets/projectCaptures/giphySentiment.gif" alt="Giphy Sentiment"/>
+          <div class="modal">
+            <span class="close">×</span>
+            <h3 id="caption"></h3>
+            <img class="modalImage" id="img01" />
+          </div>
         </div>
+        <!-- <div class="slideshow-container"> -->
+        
+          <!-- Full-width images with number and caption text -->
+          <!-- <div class="mySlides fade">
+            <div class="numbertext">one / three</div>
+            <img src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif">
+          </div>
+          <div class="text">
+            <h3>Skincare Regime Quiz</h3>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">two / three</div>
+            <img src="./styles/assets/projectCaptures/comeWineDown.gif">
+          </div>
+          <div class="text">
+            <h3>Come Wine Down</h3>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">two / three</div>
+            <img src="./styles/assets/projectCaptures/giphySentiment.gif">
+            <div class="text">
+              <h3>Giphy Sentiment</h3>
+            </div>
+          </div>
+         -->
+          <!-- Next and previous buttons -->
+          <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+         -->
+        <!-- <div class="container">
+          <ul>
+            <li>
+              <div class="box">
+                <img class="thumbnail" src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif" alt="Video of skincare regime quiz">
+                <div id="modal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modalImage" id="img01">
+                  <div id="caption"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <img class="thumbnail" src="./styles/assets/projectCaptures/comeWineDown.gif" alt="Video of come wine down app">
+                <div id="modal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modalImage" id="img01">
+                  <div id="caption"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <img class="thumbnail" src="./styles/assets/projectCaptures/giphySentiment.gif" alt="Video of giphy sentiment app">
+                <div id="modal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modalImage" id="img01">
+                  <div id="caption"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div> -->
       </div>
     </section>
   </main>
@@ -115,5 +148,31 @@
     integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="./script.js"></script>
+  <script>
+     var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "flex";
+        dots[slideIndex - 1].className += " active";
+      } 
+
+  </script>
 </body>
 </html>

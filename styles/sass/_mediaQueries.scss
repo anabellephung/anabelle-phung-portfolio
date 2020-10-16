@@ -50,20 +50,13 @@
   .container {
     min-height: 75vh;
   }
-
-  .projects ul {
-    flex-direction: column;
-  }
-
-  .projects .wrap {
-    min-height: 0;
-
-    &:first-of-type {
-      margin-right: 0;
-    }
-  }
-
 }
+
+@media only screen and (max-width: 700px) {
+  .modalImage {
+    width: 100%;
+  }
+}   
 
 @media (max-width: 690px) {
   nav {
@@ -84,10 +77,6 @@
     }
   }
 
-  .modal-content {
-    width: 100%;
-  }
-
   form {
     min-width: 400px;
 
@@ -95,15 +84,6 @@
     textarea {
       min-width: 300px;
     }
-  }
-}
-
-@media (max-width: 600px) {
-  .modal {
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
   }
 }
 
@@ -168,5 +148,11 @@
       min-width: 200px;
       width: 100px;
     }
+  }
+}
+
+@media (max-width: 375px) {
+  .pineapple {
+    right: -10px;
   }
 }
