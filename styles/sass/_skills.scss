@@ -1,0 +1,34 @@
+.skills {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.skillRow {
+  background: $primary-dark;
+  border: 5px double $primary-light;
+  padding: 20px;
+  width: 80%;
+}
+
+/* Create two equal columns that sits next to each other */
+.skillColumn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skillColumn i {
+  color: $accent-color;
+  margin: 10px;
+  vertical-align: middle;
+  font-size: clamp(4rem, 3vw, 6rem);
+  padding: 5px;
+}

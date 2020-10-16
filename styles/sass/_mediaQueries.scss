@@ -47,6 +47,18 @@
     }
   }
 
+  .skills {
+    .skillRow {
+      width: 100%;
+    }
+  }
+
+  .about {
+    .row {
+      width: 100%;
+    }
+  }
+
   .container {
     min-height: 75vh;
   }
@@ -122,6 +134,19 @@
     }
   }
 
+  .about {
+    h2,
+    ul,
+    .row {
+      margin-bottom: 20px;
+    }
+
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
   .contact {
     a {
       letter-spacing: 2px;
@@ -148,6 +173,12 @@
       min-width: 200px;
       width: 100px;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  h2 {
+    margin-bottom: 10px;
   }
 }
 

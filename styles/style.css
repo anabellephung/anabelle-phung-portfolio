@@ -371,7 +371,7 @@ form button {
 }
 
 h2 {
-  font-size: clamp(3rem, 3vw, 5rem);
+  font-size: clamp(3rem, 3vw, 6rem);
   letter-spacing: 7px;
   text-align: center;
   padding-top: 20px;
@@ -796,7 +796,7 @@ p .wordChange::before {
   overflow-y: scroll;
   max-height: 225px;
   background: #ffc3c3f0;
-  margin: 0 10px;
+  width: 70%;
   border: 5px double #0a0a0a;
 }
 
@@ -877,6 +877,52 @@ p .wordChange::before {
     -webkit-transform: rotate(15deg);
             transform: rotate(15deg);
   }
+}
+
+.skills .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills img {
+  border-radius: 50%;
+}
+
+.skillRow {
+  background: #0a0a0a;
+  border: 5px double #f1f0f0;
+  padding: 20px;
+  width: 80%;
+}
+
+/* Create two equal columns that sits next to each other */
+.skillColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skillColumn i {
+  color: #e68080e8;
+  margin: 10px;
+  vertical-align: middle;
+  font-size: clamp(4rem, 3vw, 6rem);
+  padding: 5px;
 }
 
 .ImgThumbnail {
@@ -1132,6 +1178,12 @@ form button {
   .home .homepageContents .circleFrame {
     height: 300px;
   }
+  .skills .skillRow {
+    width: 100%;
+  }
+  .about .row {
+    width: 100%;
+  }
   .container {
     min-height: 75vh;
   }
@@ -1195,6 +1247,15 @@ form button {
   .home .homepageContents .circleFrame {
     height: 250px;
   }
+  .about h2,
+  .about ul,
+  .about .row {
+    margin-bottom: 20px;
+  }
+  .about .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
   .contact a {
     letter-spacing: 2px;
   }
@@ -1216,6 +1277,12 @@ form button {
   form textarea {
     min-width: 200px;
     width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  h2 {
+    margin-bottom: 10px;
   }
 }
 
