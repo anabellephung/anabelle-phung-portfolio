@@ -925,6 +925,10 @@ p .wordChange::before {
   padding: 5px;
 }
 
+.skillColumn .white {
+  color: #f1f0f0;
+}
+
 .ImgThumbnail {
   border-radius: 5px;
   cursor: -webkit-zoom-in;
