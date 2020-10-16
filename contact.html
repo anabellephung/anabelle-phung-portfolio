@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="apple-touch-icon" sizes="180x180" href="./styles/assets/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./styles/assets/favicon_io/favicon-32x32.png">
@@ -16,7 +15,6 @@
   <title>This is Anabelle Phung.</title>
   <link rel="stylesheet" href="./styles/style.css">
 </head>
-
 <body>
   <header>
     <nav role="navigation">
@@ -25,33 +23,33 @@
           <span class="hamburger-inner"></span>
         </span>
       </button>
-      <ul class="menuList">
+      <ul id="menuList">
         <li>
-          <a href="./index.html">
+          <a class="link" href="./index.html">
             <span class="fas fa-home icon" aria-label="Homepage"></span>
             <span class="noMobile">Home</span>
           </a>
         </li>
         <li>
-          <a href="./about.html">
+          <a class="link" href="./about.html">
             <span class="fas fa-female icon" aria-label="About Me Page"></span>
             <span class="noMobile">About</span>
           </a>
         </li>
         <li>
-          <a href="./resume.html">
+          <a class="link" href="./resume.html">
             <span class="fas fa-file icon" aria-label="Experience Page"></span>
             <span class="noMobile">Resume</span>
           </a>
         </li>
         <li>
-          <a href="./projects.html">
+          <a class="link" href="./projects.html">
             <span class="fas fa-briefcase icon" aria-label="Projects Page"></span>
             <span class="noMobile">Projects</span>
           </a>
         </li>
         <li>
-          <a href="./contact.html">
+          <a class="link" href="./contact.html">
             <span class="fas fa-envelope-open icon" aria-label="Contact Page"></span>
             <span class="noMobile">Contact</span>
           </a>
@@ -82,22 +80,25 @@
               </a>
             </li>
           </ul>
+
+          <a href="mailto:anabelle.phung@outlook.com">
+            anabelle.<span class="accent">phung</span>@outlook.com
+          </a>
           
-          <form action="https://getsimpleform.com/messages?form_api_token=6b6c3f456b74658949303d16f336bc7b" method="POST">
+          <form id="emailForm">
             <ul>
               <li>
-                <label for="_replyto">Your E-mail:</label>
-                <input type="text" id="_replyto" name="_replyto">
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email">
               </li>
               <li>
-                <label for="message">Write a Message:</label>
+                <label for="message">Message:</label>
                 <textarea id="message" name="message"></textarea>
               </li>
               <li>
                 <button id="send" type="submit" class="shutterOutTransition">Send</button>
               </li>
               <li>
-                <input type="hidden" name="redirect_to" value="http://anabananabelle.ca/" />
               </li>
             </ul>
           </form>
@@ -106,9 +107,10 @@
       </div>
     </section>
   </main>
-    
+  
   <script src='https://code.jquery.com/jquery-3.4.0.min.js'
     integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>

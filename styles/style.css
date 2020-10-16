@@ -394,6 +394,59 @@ h2 {
           align-items: center;
 }
 
+.swal-overlay {
+  background-color: #e68080ba;
+}
+
+.swal-modal {
+  background-color: #0a0a0a;
+  border: 3px double #ffc0cb;
+  border-radius: 2px;
+}
+
+.swal-title {
+  margin: 0px;
+  font-size: clamp(1.8rem, 3vw, 2rem);
+  letter-spacing: 5px;
+  color: #f1f0f0;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin-bottom: 28px;
+}
+
+.swal-text {
+  background-color: #e68080e8;
+  padding: 17px;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  letter-spacing: 3px;
+  border-radius: 2px;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #0a0a0a;
+}
+
+.swal-footer {
+  background-color: #e68080e8;
+  margin-top: 32px;
+  border-top: 1px solid #e68080e8;
+  overflow: hidden;
+}
+
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #0a0a0a;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #f1f0f0;
+  color: #0a0a0a;
+}
+
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -547,7 +600,7 @@ nav::before {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: url(assets/placeholderPineappleForProfilePic.jpg) no-repeat 75%;
+  background: url(assets/navBgImg.jpeg) no-repeat 75%;
   background-size: cover;
   -webkit-filter: sepia(40%);
           filter: sepia(40%);
@@ -638,23 +691,23 @@ nav a .icon {
 }
 
 .home .homepageContents .circleFrame {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 375px;
   position: relative;
 }
 
 .home .homepageContents img {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  border: 0.5px solid #0a0a0a;
-  border-radius: 50%;
-  -webkit-filter: sepia(50%);
-          filter: sepia(50%);
+  border-radius: 5px;
 }
 
 h1 {
   font-weight: 800;
-  font-size: clamp(5rem, 3vw, 7.5rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   text-align: center;
+  margin-top: 10px;
 }
 
 h1 span {
@@ -667,11 +720,11 @@ p {
   margin-bottom: 35px;
 }
 
-p span {
+p .wordChange {
   font-style: italic;
 }
 
-p span::before {
+p .wordChange::before {
   content: 'developer';
   -webkit-animation: change infinite 3s;
           animation: change infinite 3s;
@@ -713,7 +766,6 @@ p span::before {
 
 .projects .wrap {
   min-height: 75vh;
-  min-width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -724,6 +776,10 @@ p span::before {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.projects .wrap:first-of-type {
+  margin-right: 50px;
 }
 
 .projects li {
@@ -740,10 +796,184 @@ p span::before {
 }
 
 .projects li .box {
-  width: 250px;
-  height: 200px;
-  border: 1px solid;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  width: 350px;
+  height: auto;
+  border-radius: 5px;
   text-align: center;
+}
+
+#myImg {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.77);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  border-radius: 5px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content {
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f0f0;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #e68080e8;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ImgThumbnail {
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 250px;
+  width: 250px;
+}
+
+.ImgThumbnail:nth-of-type(1) {
+  margin-left: 20%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modalImage {
+  margin: auto;
+  display: block;
+  width: 50%;
+  height: 60%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.contact a {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: 5px;
+  margin-bottom: 5px;
+  color: #f1f0f0;
+  -webkit-transition: text-shadow 0.2s ease-in-out;
+  transition: text-shadow 0.2s ease-in-out;
+}
+
+.contact a:hover, .contact a:focus, .contact a:active {
+  text-shadow: 2px 1px 2px #ffc0cb;
+}
+
+.contact .accent {
+  color: #e68080e8;
 }
 
 .socials {
@@ -758,17 +988,19 @@ p span::before {
 }
 
 .socials a {
-  font-size: 4rem;
-  padding: 20px;
+  padding: 10px;
   margin: 0 40px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border: 5px double #0a0a0a;
-  border-radius: 50%;
+  border-radius: 5px;
   color: #f1f0f0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.socials a span {
+  font-size: clamp(2.5rem, 3vw, 4rem);
 }
 
 .socials a:hover, .socials a:focus, .socials a:active {
@@ -779,8 +1011,9 @@ p span::before {
 form {
   min-width: 500px;
   padding: 20px;
-  border: 5px double #f1f0f0;
   border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px #ffc0cb;
+          box-shadow: 5px 5px 5px #ffc0cb;
 }
 
 form ul {
@@ -807,6 +1040,10 @@ form ul li {
           flex-direction: column;
 }
 
+form ul li:nth-child(2) label {
+  margin: 10px 0;
+}
+
 form label {
   font-size: clamp(1.4rem, 3vw, 1.8rem);
   letter-spacing: 10px;
@@ -816,20 +1053,29 @@ form label {
 form input,
 form textarea {
   min-width: 400px;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
   letter-spacing: 5px;
-  padding: 5px;
-  border: 3px double #0a0a0a;
+  background: #0a0a0a;
+  color: #f1f0f0;
+  text-shadow: 1px 1px 3px #ffc0cb;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: #e68080e8;
+  border-color: #ffc0cb;
+}
+
+form input {
+  padding: 10px 0 5px 0;
+  border: none;
+  border-bottom: 3px double #f1f0f0;
 }
 
 form textarea {
-  vertical-align: top;
-  height: 10rem;
   resize: none;
+  height: 10rem;
+  padding: 10px;
+  border: 3px double #f1f0f0;
 }
 
 form button {
@@ -880,6 +1126,9 @@ form button {
   section {
     min-width: 100vw;
   }
+  .home .homepageContents .circleFrame {
+    height: 300px;
+  }
   .container {
     min-height: 75vh;
   }
@@ -888,6 +1137,12 @@ form button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .projects .wrap {
+    min-height: 0;
+  }
+  .projects .wrap:first-of-type {
+    margin-right: 0;
   }
 }
 
@@ -912,12 +1167,29 @@ form button {
   nav a .icon {
     font-size: 2.5rem;
   }
+  .modal-content {
+    width: 100%;
+  }
   form {
     min-width: 400px;
   }
   form input,
   form textarea {
     min-width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: auto;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -939,6 +1211,12 @@ form button {
   }
   header li:last-of-type {
     border-bottom: none;
+  }
+  .home .homepageContents .circleFrame {
+    height: 250px;
+  }
+  .contact a {
+    letter-spacing: 2px;
   }
   .socials a {
     margin: 20px 10px;

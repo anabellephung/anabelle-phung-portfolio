@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="apple-touch-icon" sizes="180x180" href="./styles/assets/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./styles/assets/favicon_io/favicon-32x32.png">
@@ -15,7 +14,6 @@
   <title>This is Anabelle Phung.</title>
   <link rel="stylesheet" href="./styles/style.css">
 </head>
-
 <body>
   <header>
     <nav role="navigation">
@@ -24,33 +22,33 @@
           <span class="hamburger-inner"></span>
         </span>
       </button>
-      <ul class="menuList">
+      <ul id="menuList">
         <li>
-          <a href="./index.html">
+          <a class="link" href="./index.html">
             <span class="fas fa-home icon" aria-label="Homepage"></span>
             <span class="noMobile">Home</span>
           </a>
         </li>
         <li>
-          <a href="./about.html">
+          <a class="link" href="./about.html">
             <span class="fas fa-female icon" aria-label="About Me Page"></span>
             <span class="noMobile">About</span>
           </a>
         </li>
         <li>
-          <a href="./resume.html">
+          <a class="link" href="./resume.html">
             <span class="fas fa-file icon" aria-label="Experience Page"></span>
             <span class="noMobile">Resume</span>
           </a>
         </li>
         <li>
-          <a href="./projects.html">
+          <a class="link" href="./projects.html">
             <span class="fas fa-briefcase icon" aria-label="Projects Page"></span>
             <span class="noMobile">Projects</span>
           </a>
         </li>
         <li>
-          <a href="./contact.html">
+          <a class="link" href="./contact.html">
             <span class="fas fa-envelope-open icon" aria-label="Contact Page"></span>
             <span class="noMobile">Contact</span>
           </a>
@@ -69,23 +67,41 @@
               <li>
                 <h3>Skincare Regime Quiz</h3>
                 <div class="box">
+                  <img class="thumbnail" src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif" alt="Video of skincare regime quiz">
+                  <div id="modal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modalImage" id="img01">
+                    <div id="caption"></div>
+                  </div>
                 </div>
               </li>
-              <li>
+              <!-- <li>
                 <h3>Top 10 Food Cities in the World</h3>
                 <div class="box">
                 </div>
-              </li>
+              </li> -->
             </div>
             <div class="wrap">
               <li>
                 <h3>Come Wine Down</h3>
                 <div class="box">
+                  <img class="thumbnail" src="./styles/assets/projectCaptures/comeWineDown.gif" alt="Video of come wine down app">
+                  <div id="modal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modalImage" id="img01">
+                    <div id="caption"></div>
+                  </div>
                 </div>
               </li>
               <li>
                 <h3>Giphy Sentiment</h3>
                 <div class="box">
+                  <img class="thumbnail" src="./styles/assets/projectCaptures/giphySentiment.gif" alt="Video of giphy sentiment app">
+                  <div id="modal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modalImage" id="img01">
+                    <div id="caption"></div>
+                  </div>
                 </div>
               </li>
             </div>
@@ -97,6 +113,7 @@
 
   <script src='https://code.jquery.com/jquery-3.4.0.min.js'
     integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>
