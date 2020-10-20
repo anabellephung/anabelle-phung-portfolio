@@ -374,7 +374,7 @@ h2 {
   font-size: clamp(3rem, 3vw, 6rem);
   letter-spacing: 7px;
   text-align: center;
-  min-height: 10vh;
+  padding-top: 10px;
 }
 
 .container {
@@ -656,7 +656,6 @@ nav a:hover, nav a:focus, nav a:active {
 
 nav a .icon {
   font-size: 1.8rem;
-  margin-bottom: 5px;
 }
 
 .home .wrapper {
@@ -752,7 +751,7 @@ p .wordChange::before {
   }
 }
 
-.about .wrapper {
+.about .contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -760,20 +759,42 @@ p .wordChange::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 90vh;
+  position: relative;
 }
 
-.about .wrapper li {
+.about ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about ul li {
   margin-bottom: 20px;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   letter-spacing: 2px;
+  line-height: 2;
+  text-align: center;
+  font-weight: bold;
 }
 
-.about .wrapper li:last-child {
+.about ul li:last-child {
   position: relative;
 }
 
@@ -786,17 +807,15 @@ p .wordChange::before {
 }
 
 .row {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 4px;
-  overflow-y: scroll;
-  max-height: 225px;
-  background: #ffc3c3f0;
-  width: 70%;
-  border: 5px double #0a0a0a;
 }
 
 /* Create two equal columns that sits next to each other */
@@ -810,15 +829,15 @@ p .wordChange::before {
 .column img {
   margin: 8px 0;
   vertical-align: middle;
-  height: 24%;
   width: 100%;
   border-radius: 5px;
+  height: 150px;
 }
 
 .pineapple {
   font-size: clamp(2.5rem, 3vw, 4.5rem);
   position: absolute;
-  right: 0;
+  right: -8%;
   bottom: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -900,7 +919,6 @@ p .wordChange::before {
 
 .skillRow {
   background: #0a0a0a;
-  border: 5px double #f1f0f0;
   padding: 20px;
   width: 80%;
 }
@@ -914,6 +932,7 @@ p .wordChange::before {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .skillColumn i {
@@ -924,11 +943,18 @@ p .wordChange::before {
   padding: 5px;
 }
 
+.skillColumn i::before {
+  -webkit-box-shadow: 5px 5px 5px #f1f0f0;
+          box-shadow: 5px 5px 5px #f1f0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .skillColumn .white {
   color: #f1f0f0;
 }
 
-.ImgThumbnail {
+.imgThumbnail {
   border-radius: 5px;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
@@ -940,7 +966,7 @@ p .wordChange::before {
   transition: opacity 0.3s ease-in-out;
 }
 
-.ImgThumbnail:hover, .ImgThumbnail:focus, .ImgThumbnail:active {
+.imgThumbnail:hover, .imgThumbnail:focus, .imgThumbnail:active {
   opacity: 0.6;
 }
 
@@ -1157,6 +1183,13 @@ form button {
   margin-top: 15px;
 }
 
+@media (max-height: 750px) {
+  .imgThumbnail {
+    width: auto;
+    height: 200px;
+  }
+}
+
 @media (max-width: 900px) {
   body {
     -webkit-box-orient: vertical;
@@ -1192,7 +1225,7 @@ form button {
     border-bottom: none;
   }
   nav a {
-    padding: 5px 15px;
+    padding: 10px 20px;
   }
   section, .wrapper {
     min-height: 85vh;
@@ -1204,9 +1237,6 @@ form button {
     height: 300px;
   }
   .skills .skillRow {
-    width: 100%;
-  }
-  .about .row {
     width: 100%;
   }
   .container {
@@ -1244,6 +1274,9 @@ form button {
   nav a .icon {
     font-size: 2.5rem;
   }
+  .column img {
+    height: auto;
+  }
   form {
     min-width: 400px;
   }
@@ -1254,6 +1287,9 @@ form button {
 }
 
 @media (max-width: 460px) {
+  h2 {
+    margin-bottom: 50px;
+  }
   header .hamburger {
     display: block;
   }
@@ -1266,9 +1302,6 @@ form button {
   header li {
     border-bottom: 0.5px solid #0a0a0a;
   }
-  header li a {
-    padding: 5px 20px;
-  }
   header li:last-of-type {
     border-bottom: none;
   }
@@ -1279,10 +1312,6 @@ form button {
   .about ul,
   .about .row {
     margin-bottom: 20px;
-  }
-  .about .row {
-    margin-right: 0;
-    margin-left: 0;
   }
   .contact a {
     letter-spacing: 2px;
@@ -1308,14 +1337,14 @@ form button {
   }
 }
 
-@media (max-width: 400px) {
-  h2 {
-    margin-bottom: 10px;
+@media (max-width: 414px) {
+  .pineapple {
+    right: 30%;
   }
 }
 
 @media (max-width: 375px) {
   .pineapple {
-    right: -10px;
+    right: 10%;
   }
 }

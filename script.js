@@ -41,7 +41,7 @@ $(function() {
   var modalEle = document.querySelector(".modal");
   var modalImage = document.querySelector(".modalImage");
   var captionText = document.getElementById("caption");
-  Array.from(document.querySelectorAll(".ImgThumbnail")).forEach(item => {
+  Array.from(document.querySelectorAll(".imgThumbnail")).forEach(item => {
     item.addEventListener("click", event => {
       modalEle.style.display = "flex";
       modalImage.src = event.target.src;
