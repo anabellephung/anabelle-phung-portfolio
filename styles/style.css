@@ -1072,6 +1072,13 @@ h3 {
   text-shadow: 2px 1px 2px #ffc0cb;
 }
 
+.contact .calendly {
+  cursor: pointer;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  letter-spacing: 5px;
+  border-bottom: 5px dotted #f1f0f0;
+}
+
 .contact .accent {
   color: #e68080e8;
 }
