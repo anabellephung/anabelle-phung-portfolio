@@ -61,85 +61,48 @@
   <main>
     <section class="projects">
       <div class="wrapper">
-        <h2>Projects</h2>
+        <h2>Featured Projects</h2>
 
         <div class="box">
-          <img class="ImgThumbnail" src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif" alt="Skincare Regime Quiz"/>
-          <img class="ImgThumbnail" src="./styles/assets/projectCaptures/comeWineDown.gif" alt="Come Wine Down"/>
-          <img class="ImgThumbnail" src="./styles/assets/projectCaptures/giphySentiment.gif" alt="Giphy Sentiment"/>
+          <div class="projectBox">
+            <h3>Skincare Regime Quiz</h3>
+            <img class="ImgThumbnail" src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif" alt="An interactive and dynamic quiz that captures user input with use of radio inputs, and returns a final skincare product. It was created using jQuery, and the products itself were manually appended with research." />
+            <a href="https://github.com/anabellephung/skincareRegimeQuiz" target="_blank">
+              <span class="fab fa-github" aria-label="github repository of Skincare Regime Quiz"></span>
+            </a>
+            <a href="https://anabellephung.github.io/skincareRegimeQuiz/" target="_blank">
+              <span class="fas fa-globe" aria-label="live site of Skincare Regime Quiz"></span>
+            </a>
+          </div>
+
+          <div class="projectBox">
+            <h3>Come Wine Down</h3>
+            <img class="ImgThumbnail" src="./styles/assets/projectCaptures/comeWineDown.gif" alt="An artistic application that consists of three sections: a youtube music player, and interactive art search box, and a 'sticky thoughts' diary entry. It was created with React and makes use of several API's and Firebase's realtime database." />
+            <a href="https://github.com/anabellephung/comeWineDown" target="_blank">
+              <span class="fab fa-github" aria-label="github repository of Come Wine Down App"></span>
+            </a>
+            <a href="https://anabellephung.github.io/comeWineDown/" target="_blank">
+              <span class="fas fa-globe" aria-label="live site of Come Wine Down App"></span>
+            </a>
+          </div>
+
+          <div class="projectBox">
+            <h3>Giphy Sentiment</h3>
+            <img class="ImgThumbnail" src="./styles/assets/projectCaptures/giphySentiment.gif" alt="A fun and friendly application created with React and uses the GIPHY API and to let the user input the emotion they are feeling that day. The user can then choose a GIF they like, and that GIF will dynmically added to the '2020 Feels' timeline below using Firebase's realtime database." />
+            <a href="https://github.com/Giphy-Sentiment/Giphy-Sentiment" target="_blank">
+              <span class="fab fa-github" aria-label="github repository of Giphy Sentiment App"></span>
+            </a>
+            <a href="https://giphy-sentiment.github.io/Giphy-Sentiment/" target="_blank">
+              <span class="fas fa-globe" aria-label="live site of Giphy Sentiment App"></span>
+            </a>
+          </div>
           <div class="modal">
             <span class="close">×</span>
-            <h3 id="caption"></h3>
+            <p id="caption"></p>
             <img class="modalImage" id="img01" />
           </div>
         </div>
-        <!-- <div class="slideshow-container"> -->
-        
-          <!-- Full-width images with number and caption text -->
-          <!-- <div class="mySlides fade">
-            <div class="numbertext">one / three</div>
-            <img src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif">
-          </div>
-          <div class="text">
-            <h3>Skincare Regime Quiz</h3>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">two / three</div>
-            <img src="./styles/assets/projectCaptures/comeWineDown.gif">
-          </div>
-          <div class="text">
-            <h3>Come Wine Down</h3>
-          </div>
-        
-          <div class="mySlides fade">
-            <div class="numbertext">two / three</div>
-            <img src="./styles/assets/projectCaptures/giphySentiment.gif">
-            <div class="text">
-              <h3>Giphy Sentiment</h3>
-            </div>
-          </div>
-         -->
-          <!-- Next and previous buttons -->
-          <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-         -->
-        <!-- <div class="container">
-          <ul>
-            <li>
-              <div class="box">
-                <img class="thumbnail" src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif" alt="Video of skincare regime quiz">
-                <div id="modal" class="modal">
-                  <span class="close">&times;</span>
-                  <img class="modalImage" id="img01">
-                  <div id="caption"></div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="box">
-                <img class="thumbnail" src="./styles/assets/projectCaptures/comeWineDown.gif" alt="Video of come wine down app">
-                <div id="modal" class="modal">
-                  <span class="close">&times;</span>
-                  <img class="modalImage" id="img01">
-                  <div id="caption"></div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="box">
-                <img class="thumbnail" src="./styles/assets/projectCaptures/giphySentiment.gif" alt="Video of giphy sentiment app">
-                <div id="modal" class="modal">
-                  <span class="close">&times;</span>
-                  <img class="modalImage" id="img01">
-                  <div id="caption"></div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div> -->
+       
       </div>
     </section>
   </main>

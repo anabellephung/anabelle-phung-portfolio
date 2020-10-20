@@ -3,16 +3,40 @@
    cursor: zoom-in;
    transition: 0.3s;
    height: 250px;
-   width: 350px;
+	 width: 350px;
+	 transition: opacity 0.3s ease-in-out;
+	 
+	 &:hover,
+	 &:focus,
+	 &:active {
+		 opacity: 0.6;
+	 }
 }
 
 .box {
   min-height: 90vh;
   min-width: 75vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.projectBox {
+	text-align: center;
+
+  a {
+		font-size: 3rem;
+		padding: 5px;
+		color: $primary-light;
+		transition: color 0.3s ease-in-out;
+
+		&:hover,
+		&:focus,
+		&:active {
+				color: $accent-color;
+		}
+	}
 }
 
 .modal {
@@ -34,28 +58,32 @@
    border-radius: 5px;
 }
 #caption {
-   display: block;
+	display: block;
+	margin: 15px 80px;
+	text-align: center;
+	font-size: 2rem;
+	letter-spacing: 3px;
 }
 
 h3 {
-  font-size: clamp(2.6rem, 3vw, 4.6rem);
-  text-align: center;
-  margin-bottom: 10px;
-  text-transform: full-width;
+	font-size: 2rem;
+	margin-bottom: 10px;
+	letter-spacing: 5px;
 }
+
 .close {
-   position: absolute;
-   top: 15px;
-   right: 35px;
-   color: #f1f1f1;
-   font-size: 40px;
-   font-weight: bold;
-   transition: 0.3s;
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
 }
 .close:hover,
 .close:focus {
-   color: $accent-color;
-   cursor: pointer;
+	color: $accent-color;
+	cursor: pointer;
 }
 
 // .projects {

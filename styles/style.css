@@ -374,7 +374,6 @@ h2 {
   font-size: clamp(3rem, 3vw, 6rem);
   letter-spacing: 7px;
   text-align: center;
-  padding-top: 20px;
   min-height: 10vh;
 }
 
@@ -937,6 +936,12 @@ p .wordChange::before {
   transition: 0.3s;
   height: 250px;
   width: 350px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ImgThumbnail:hover, .ImgThumbnail:focus, .ImgThumbnail:active {
+  opacity: 0.6;
 }
 
 .box {
@@ -945,16 +950,29 @@ p .wordChange::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projectBox {
+  text-align: center;
+}
+
+.projectBox a {
+  font-size: 3rem;
+  padding: 5px;
+  color: #f1f0f0;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.projectBox a:hover, .projectBox a:focus, .projectBox a:active {
+  color: #e68080e8;
 }
 
 .modal {
@@ -986,13 +1004,16 @@ p .wordChange::before {
 
 #caption {
   display: block;
+  margin: 15px 80px;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 3px;
 }
 
 h3 {
-  font-size: clamp(2.6rem, 3vw, 4.6rem);
-  text-align: center;
+  font-size: 2rem;
   margin-bottom: 10px;
-  text-transform: full-width;
+  letter-spacing: 5px;
 }
 
 .close {
@@ -1190,6 +1211,9 @@ form button {
   }
   .container {
     min-height: 75vh;
+  }
+  .projectBox {
+    margin-bottom: 50px;
   }
 }
 
