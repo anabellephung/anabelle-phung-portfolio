@@ -393,10 +393,6 @@ h2 {
           align-items: center;
 }
 
-.swal-overlay {
-  background-color: #e68080ba;
-}
-
 .swal-modal {
   background-color: #0a0a0a;
   border: 3px double #ffc0cb;
@@ -1214,7 +1210,10 @@ form button {
     height: 200px;
   }
   .calendly {
-    margin-top: 20px;
+    margin: 20px 0;
+  }
+  form {
+    margin-bottom: 20px;
   }
 }
 

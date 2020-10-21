@@ -81,10 +81,6 @@ h2 {
   @include flex-center-column-even;
 }
 
-.swal-overlay {
-  background-color: #e68080ba;
-}
-
 .swal-modal {
   background-color: $primary-dark;
   border: 3px double $monochromatic-accent;

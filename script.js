@@ -1,4 +1,45 @@
 $(function() {
+  // var newHash = "",
+  //   $mainContent = $("#main-content"),
+  //   $pageWrap = $("#page-wrap"),
+  //   baseHeight = 0,
+  //   $el;
+
+  // $pageWrap.height($pageWrap.height());
+  // baseHeight = $pageWrap.height() - $mainContent.height();
+
+  // $("nav").delegate("a", "click", function () {
+  //   window.location.hash = $(this).attr("href");
+  //   return false;
+  // });
+
+  // $(window).bind('hashchange', function () {
+
+  //   newHash = window.location.hash.substring(1);
+
+  //   if (newHash) {
+  //     $mainContent
+  //       .find("#guts")
+  //       .fadeOut(200, function () {
+  //         $mainContent.hide().load(newHash + " #guts", function () {
+  //           $mainContent.fadeIn(200, function () {
+  //             $pageWrap.animate({
+  //               height: baseHeight + $mainContent.height() + "px"
+  //             });
+  //           });
+  //           $("nav a").removeClass("current");
+  //           $("nav a[href='" + newHash + "']").addClass("current");
+  //         });
+  //       });
+  //   };
+
+  // });
+
+  // $(window).trigger('hashchange');
+
+
+
+  
   // Toggle hamburger mobile menu
   const $hamburger = $(".hamburger");
   $hamburger.on("click", function() {
@@ -12,11 +53,6 @@ $(function() {
       $hamburger.removeClass("is-active")
     }
   })
-  // Email form handlers
-  // $('#send').on("click", function(e) {
-  //   e.preventDefault();
-  //   swal("Thank you for the message! I will get back to you ASAP 😸.");
-  // })
   $('#emailForm').on('submit', function (e) {
     e.preventDefault();
     const email = $('#email').val();
