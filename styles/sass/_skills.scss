@@ -1,20 +1,31 @@
 .skills {
-  .wrapper {
+  .skillRow {
+    min-height: 100vh;
+    min-width: 75vw;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-  }
+    background: $primary-dark;
+    padding: 20px;
+    width: 80%;
 
-  img {
-    border-radius: 50%;
-  }
-}
+    .icon {
+      height: 150px;
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-.skillRow {
-  background: $primary-dark;
-  padding: 20px;
-  width: 80%;
+    p {
+      font-size: clamp(1.2rem, 3vw, 1.4rem);
+      letter-spacing: 5px;
+      margin-bottom: 2px;
+    }
+  }
 }
 
 /* Create two equal columns that sits next to each other */

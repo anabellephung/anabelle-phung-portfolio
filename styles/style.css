@@ -789,7 +789,6 @@ p .wordChange::before {
   margin-bottom: 20px;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   letter-spacing: 2px;
-  line-height: 2;
   text-align: center;
   font-weight: bold;
 }
@@ -897,30 +896,50 @@ p .wordChange::before {
   }
 }
 
-.skills .wrapper {
+.skills .skillRow {
+  min-height: 100vh;
+  min-width: 75vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.skills img {
-  border-radius: 50%;
-}
-
-.skillRow {
   background: #0a0a0a;
   padding: 20px;
   width: 80%;
+}
+
+.skills .skillRow .icon {
+  height: 150px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.skills .skillRow p {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  letter-spacing: 5px;
+  margin-bottom: 2px;
 }
 
 /* Create two equal columns that sits next to each other */
