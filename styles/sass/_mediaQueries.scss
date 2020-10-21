@@ -124,6 +124,12 @@
       margin: 5px;
     }
   }
+
+  .about {
+    .contents {
+      min-height: 70vh;
+    }
+  }
 }
 
 @media (max-width: 460px) {
