@@ -112,6 +112,16 @@
   }
 }
 
+@media (max-width: 550px) {
+  .skills {
+    .skillRow .icon {
+      height: 100px;
+      width: 100px;
+      margin: 5px;
+    }
+  }
+}
+
 @media (max-width: 460px) {
   h2 {
     margin-bottom: 50px;

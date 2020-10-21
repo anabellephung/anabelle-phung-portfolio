@@ -15,13 +15,13 @@
       width: 150px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: end;
       align-items: center;
       text-align: center;
     }
 
     p {
-      font-size: clamp(1.2rem, 3vw, 1.4rem);
+      font-size: clamp(1rem, 3vw, 1.4rem);
       letter-spacing: 5px;
       margin-bottom: 2px;
     }
@@ -33,14 +33,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 20px;
 }
 
 .skillColumn i {
   color: $accent-color;
   margin: 10px;
   vertical-align: middle;
-  font-size: clamp(4rem, 3vw, 6rem);
+  font-size: clamp(2rem, 3vw, 6rem);
   padding: 5px;
 
   &::before {
