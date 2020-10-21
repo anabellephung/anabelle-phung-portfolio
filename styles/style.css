@@ -715,9 +715,9 @@ p {
 
 p .wordChange {
   font-style: italic;
+  color: #e68080e8;
   display: inline-block;
-  text-align: center;
-  width: 120px;
+  width: 410px;
 }
 
 .about .contents {

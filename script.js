@@ -2,14 +2,14 @@ $(function() {
   let words = [
     'developer',
     'designer',
-    'female',
     'collaborator',
-  ], i = 0; 
+    'female'
+  ],
+    i = 0;
 
-  setInterval(function () {
-
-    $('#change').fadeOut(function () {
-      $(this).html(words[i = (i + 1) % words.length]).fadeIn(); 
+  setInterval(function () {     
+    $('#change').fadeOut(400, function () {
+      $(this).text(words[(i === words.length - 1) ? i = 0 : i += 1]).fadeIn(400);
     });
   }, 2000);
 
