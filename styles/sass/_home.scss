@@ -40,25 +40,9 @@ p {
 
   .wordChange {
     font-style: italic;
-
-     &::before {
-      content: 'developer';
-      animation: change infinite 3s;
-    }
-
-    @keyframes change {
-      0% {
-        content: 'developer';
-      }
-
-      50% {
-        content: 'female';
-      }
-
-      75% {
-        content: 'developer';
-      }
-    }
+    display: inline-block;
+    text-align:center;
+    width: 120px;
   }
 }
     

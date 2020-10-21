@@ -715,36 +715,9 @@ p {
 
 p .wordChange {
   font-style: italic;
-}
-
-p .wordChange::before {
-  content: 'developer';
-  -webkit-animation: change infinite 3s;
-          animation: change infinite 3s;
-}
-
-@-webkit-keyframes change {
-  0% {
-    content: 'developer';
-  }
-  50% {
-    content: 'female';
-  }
-  75% {
-    content: 'developer';
-  }
-}
-
-@keyframes change {
-  0% {
-    content: 'developer';
-  }
-  50% {
-    content: 'female';
-  }
-  75% {
-    content: 'developer';
-  }
+  display: inline-block;
+  text-align: center;
+  width: 120px;
 }
 
 .about .contents {
