@@ -1,36 +1,36 @@
 $(function() {
+  // Word change animation - homepage
   let words = [
     'developer',
     'designer',
     'collaborator',
     'female'
   ],
-    i = 0;
-
+  i = 0;
   setInterval(function () {     
     $('#change').fadeOut(400, function () {
       $(this).text(words[(i === words.length - 1) ? i = 0 : i += 1]).fadeIn(400);
     });
   }, 2000);
-
   // Toggle hamburger mobile menu
-  const $hamburger = $(".hamburger");
-  $hamburger.on("click", function() {
-    $hamburger.toggleClass("is-active")
-    $("#menuList").toggleClass("menuToggle");
+  const $hamburger = $('.hamburger');
+  $hamburger.on('click', function() {
+    $hamburger.toggleClass('is-active')
+    $('#menuList').toggleClass('menuToggle');
   });
   // Media query for hamburger mobile menu
   $(window).on('resize', function () {
     if (window.innerWidth > 460) {
-      $("#menuList").removeClass("menuToggle");
-      $hamburger.removeClass("is-active")
+      $('#menuList').removeClass('menuToggle');
+      $hamburger.removeClass('is-active')
     }
   })
+  // Formspree contact form - prevent default refresh
   $('#emailForm').on('submit', function (e) {
     e.preventDefault();
     const email = $('#email').val();
     const message = $('#message').val();
-    // Send to formspree
+    // Send to formspree, prevent redirect to default 'thank you page'
     $.ajax({
       url: 'https://formspree.io/f/xpzopbzk',
       method: 'POST',
@@ -46,19 +46,18 @@ $(function() {
       }
     });
   });
-
-  var modalEle = document.querySelector(".modal");
-  var modalImage = document.querySelector(".modalImage");
-  var captionText = document.getElementById("caption");
-  Array.from(document.querySelectorAll(".imgThumbnail")).forEach(item => {
-    item.addEventListener("click", event => {
-      modalEle.style.display = "flex";
-      modalImage.src = event.target.src;
-      captionText.innerHTML = event.target.alt;
-      
+  // Project Gallery Modal
+  let modal = document.querySelector('.modal');
+  let modalImg = document.querySelector('.modalImg');
+  let caption = document.getElementById('caption');
+  Array.from(document.querySelectorAll('.imgThumbnail')).forEach(item => {
+    item.addEventListener('click', event => {
+      modal.style.display = 'flex';
+      modalImg.src = event.target.src;
+      caption.innerHTML = event.target.alt;
     });
   });
-  document.querySelector(".close").addEventListener("click", () => {
-    modalEle.style.display = "none";
+  document.querySelector('.close').addEventListener('click', () => {
+    modal.style.display = 'none';
   });
 })
