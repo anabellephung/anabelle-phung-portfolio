@@ -21,28 +21,27 @@
       border-radius: 5px;
     }
   }
-}
 
-h1 {
-  font-weight: $extra-bold;
-  font-size: clamp(3rem, 6vw, 6rem);
-  text-align: center;
-  
-  span {
-    color: $accent-color;
-  }
-}
-
-p {
-  font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: $semi-bold;
-  margin-bottom: 35px;
-
-  .wordChange {
-    font-style: italic;
-    color: $accent-color;
-    display: inline-block;
-    width: 169px;
-  }
-}
+  h1 {
+    font-weight: $extra-bold;
+    font-size: clamp(3rem, 6vw, 6rem);
+    text-align: center;
     
+    span {
+      color: $accent-color;
+    }
+  }
+
+  p {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    font-weight: $semi-bold;
+    margin-bottom: 35px;
+
+    .wordChange {
+      font-style: italic;
+      color: $accent-color;
+      display: inline-block;
+      width: 169px;
+    }
+  }
+}

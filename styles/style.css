@@ -374,7 +374,7 @@ h2 {
   font-size: clamp(3rem, 3vw, 6rem);
   letter-spacing: 7px;
   text-align: center;
-  padding-top: 10px;
+  padding: 5px 0;
 }
 
 .container {
@@ -697,23 +697,23 @@ nav a .icon {
   border-radius: 5px;
 }
 
-h1 {
+.home h1 {
   font-weight: 800;
   font-size: clamp(3rem, 6vw, 6rem);
   text-align: center;
 }
 
-h1 span {
+.home h1 span {
   color: #e68080e8;
 }
 
-p {
+.home p {
   font-size: clamp(2rem, 3vw, 3.5rem);
   font-weight: 600;
   margin-bottom: 35px;
 }
 
-p .wordChange {
+.home p .wordChange {
   font-style: italic;
   color: #e68080e8;
   display: inline-block;
@@ -742,35 +742,35 @@ p .wordChange {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .about ul li {
-  margin-bottom: 20px;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   letter-spacing: 2px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .about ul li:last-child {
   position: relative;
 }
 
-.about .color {
+.about ul .color {
   color: #e68080e8;
 }
 
-.about .italic {
+.about ul .italic {
   font-style: italic;
 }
 
@@ -786,15 +786,14 @@ p .wordChange {
   padding: 0 4px;
 }
 
-/* Create two equal columns that sits next to each other */
-.column {
+.row .column {
   -webkit-box-flex: 25%;
       -ms-flex: 25%;
           flex: 25%;
   padding: 0 4px;
 }
 
-.column img {
+.row .column img {
   margin: 8px 0;
   vertical-align: middle;
   width: 100%;
@@ -865,7 +864,7 @@ p .wordChange {
   }
 }
 
-.skills .skillRow {
+.skillRow {
   min-height: 100vh;
   min-width: 75vw;
   display: -webkit-box;
@@ -886,7 +885,36 @@ p .wordChange {
   width: 80%;
 }
 
-.skills .skillRow .icon {
+.skillRow .skillColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skillRow .skillColumn .white {
+  color: #f1f0f0;
+}
+
+.skillRow i {
+  color: #e68080e8;
+  margin: 10px;
+  vertical-align: middle;
+  font-size: clamp(2rem, 3vw, 6rem);
+  padding: 5px;
+}
+
+.skillRow i::before {
+  -webkit-box-shadow: 5px 5px 5px #f1f0f0;
+          box-shadow: 5px 5px 5px #f1f0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.skillRow .icon {
   height: 150px;
   width: 150px;
   display: -webkit-box;
@@ -905,56 +933,10 @@ p .wordChange {
   text-align: center;
 }
 
-.skills .skillRow p {
+.skillRow p {
   font-size: clamp(1rem, 3vw, 1.4rem);
   letter-spacing: 5px;
   margin-bottom: 2px;
-}
-
-/* Create two equal columns that sits next to each other */
-.skillColumn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.skillColumn i {
-  color: #e68080e8;
-  margin: 10px;
-  vertical-align: middle;
-  font-size: clamp(2rem, 3vw, 6rem);
-  padding: 5px;
-}
-
-.skillColumn i::before {
-  -webkit-box-shadow: 5px 5px 5px #f1f0f0;
-          box-shadow: 5px 5px 5px #f1f0f0;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.skillColumn .white {
-  color: #f1f0f0;
-}
-
-.imgThumbnail {
-  border-radius: 5px;
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  height: 250px;
-  width: 350px;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.imgThumbnail:hover, .imgThumbnail:focus, .imgThumbnail:active {
-  opacity: 0.6;
 }
 
 .box {
@@ -974,6 +956,28 @@ p .wordChange {
 
 .projectBox {
   text-align: center;
+}
+
+.projectBox h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+.projectBox .imgThumbnail {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 250px;
+  width: 350px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.projectBox .imgThumbnail:hover, .projectBox .imgThumbnail:focus, .projectBox .imgThumbnail:active {
+  opacity: 0.6;
 }
 
 .projectBox a {
@@ -1010,12 +1014,12 @@ p .wordChange {
   background-color: rgba(0, 0, 0, 0.77);
 }
 
-.modalImage {
+.modal .modalImage {
   display: block;
   border-radius: 5px;
 }
 
-#caption {
+.modal #caption {
   display: block;
   margin: 20px 20px 0 20px;
   text-align: center;
@@ -1023,27 +1027,20 @@ p .wordChange {
   letter-spacing: 3px;
 }
 
-h3 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  letter-spacing: 5px;
-}
-
-.close {
+.modal .close {
   position: absolute;
   top: -1%;
   right: 1%;
-  color: #f1f1f1;
+  color: #f1f0f0;
   font-size: 40px;
   font-weight: bold;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
-  color: #e68080e8;
+.modal .close:hover, .modal .close:focus {
   cursor: pointer;
+  color: #e68080e8;
 }
 
 .contact a {
@@ -1118,6 +1115,9 @@ form ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1140,7 +1140,7 @@ form ul li:nth-child(2) label {
 
 form label {
   font-size: clamp(1.4rem, 3vw, 1.8rem);
-  letter-spacing: 10px;
+  letter-spacing: 8px;
   display: inline-block;
 }
 
@@ -1177,11 +1177,14 @@ form button {
   margin-top: 15px;
 }
 
-@media (max-height: 750px) {
-  .imgThumbnail {
-    width: auto;
-    height: 200px;
+@media (max-height: 750px) and (min-width: 901px) {
+  .projectBox .imgThumbnail {
+    width: 250px;
+    height: 150px;
   }
+}
+
+@media (max-height: 750px) {
   .calendly {
     margin: 20px 0;
   }
@@ -1274,6 +1277,9 @@ form button {
   nav a .icon {
     font-size: 2.5rem;
   }
+  .home .homepageContents .circleFrame {
+    height: 225px;
+  }
   .column img {
     height: auto;
   }
@@ -1287,20 +1293,17 @@ form button {
 }
 
 @media (max-width: 550px) {
+  .about .contents {
+    min-height: 70vh;
+  }
   .skills .skillRow .icon {
     height: 100px;
     width: 100px;
     margin: 5px;
   }
-  .about .contents {
-    min-height: 70vh;
-  }
 }
 
 @media (max-width: 460px) {
-  h2 {
-    margin-bottom: 30px;
-  }
   header .hamburger {
     display: block;
   }
@@ -1316,18 +1319,17 @@ form button {
   header li:last-of-type {
     border-bottom: none;
   }
-  .home .homepageContents .circleFrame {
-    height: 250px;
-  }
-  .about h2,
   .about ul,
   .about .row {
     margin-bottom: 20px;
   }
+  h2 {
+    margin-bottom: 30px;
+  }
   .contact a {
     letter-spacing: 2px;
   }
-  .socials a {
+  .contact .socials a {
     margin: 20px 10px;
   }
   form {
@@ -1337,9 +1339,6 @@ form button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  form label {
-    letter-spacing: 8px;
   }
   form input,
   form textarea {

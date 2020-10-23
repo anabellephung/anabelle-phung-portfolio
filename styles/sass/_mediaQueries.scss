@@ -1,9 +1,14 @@
-@media (max-height: 750px) {
-  .imgThumbnail {
-    width: auto;
-    height: 200px;
+// @media special for projects
+@media (max-height: 750px) and (min-width: 901px) {
+  .projectBox {
+    .imgThumbnail {
+      width: 250px;
+      height: 150px;
+    }
   }
-
+}
+// @media for max-heights
+@media (max-height: 750px) {
   .calendly {
     margin: 20px 0;
   }
@@ -12,7 +17,7 @@
     margin-bottom: 20px;
   }
 }
-
+// @media for max-widths
 @media (max-width: 900px) {
   body {
     flex-direction: column;
@@ -102,6 +107,14 @@
     }
   }
 
+   .home {
+    .homepageContents {
+      .circleFrame {
+       height: 225px;
+      }
+    }
+  }
+
   .column img {
     height: auto;
   }
@@ -117,6 +130,12 @@
 }
 
 @media (max-width: 550px) {
+  .about {
+    .contents {
+      min-height: 70vh;
+    }
+  }
+
   .skills {
     .skillRow .icon {
       height: 100px;
@@ -124,19 +143,9 @@
       margin: 5px;
     }
   }
-
-  .about {
-    .contents {
-      min-height: 70vh;
-    }
-  }
 }
 
 @media (max-width: 460px) {
-  h2 {
-    margin-bottom: 30px;
-  }
-
   header {
     .hamburger {
       display: block;
@@ -159,41 +168,32 @@
     }
   }
 
-  .home {
-    .homepageContents {
-      .circleFrame {
-       height: 250px;
-      }
-    }
-  }
-
   .about {
-    h2,
     ul,
     .row {
       margin-bottom: 20px;
     }
   }
 
+  h2 {
+    margin-bottom: 30px;
+  }
+
   .contact {
     a {
       letter-spacing: 2px;
     }
-  }
 
-  .socials a {
-    margin: 20px 10px;
-  } 
+    .socials a {
+      margin: 20px 10px;
+    }
+  }
 
   form {
     min-width: 300px;
 
     li {
       align-items: center;
-    }
-
-    label {
-      letter-spacing: 8px;
     }
 
     input,

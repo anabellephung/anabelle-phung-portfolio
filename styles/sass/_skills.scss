@@ -1,54 +1,45 @@
-.skills {
-  .skillRow {
-    min-height: 100vh;
-    min-width: 75vw;
+.skillRow {
+  min-height: 100vh;
+  min-width: 75vw;
+  @include flex-center-column;
+  background: $primary-dark;
+  padding: 20px;
+  width: 80%;
+
+  .skillColumn {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: $primary-dark;
-    padding: 20px;
-    width: 80%;
-
-    .icon {
-      height: 150px;
-      width: 150px;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      align-items: center;
-      text-align: center;
-    }
-
-    p {
-      font-size: clamp(1rem, 3vw, 1.4rem);
-      letter-spacing: 5px;
-      margin-bottom: 2px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    .white {
+      color: $primary-light;
     }
   }
-}
 
-/* Create two equal columns that sits next to each other */
-.skillColumn {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  i {
+    color: $accent-color;
+    margin: 10px;
+    vertical-align: middle;
+    font-size: clamp(2rem, 3vw, 6rem);
+    padding: 5px;
 
-.skillColumn i {
-  color: $accent-color;
-  margin: 10px;
-  vertical-align: middle;
-  font-size: clamp(2rem, 3vw, 6rem);
-  padding: 5px;
-
-  &::before {
-    box-shadow: 5px 5px 5px $primary-light;
-    padding: 10px;
-    border-radius: 10px;
+    &::before {
+      box-shadow: 5px 5px 5px $primary-light;
+      padding: 10px;
+      border-radius: 10px;
+    }
   }
-}
 
-.skillColumn .white {
-  color: $primary-light;
+  .icon {
+    height: 150px;
+    width: 150px;
+    @include flex-center-column-end;
+    text-align: center;
+  }
+
+  p {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    letter-spacing: 5px;
+    margin-bottom: 2px;
+  }
 }
