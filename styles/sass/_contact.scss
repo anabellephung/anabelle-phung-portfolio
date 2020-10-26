@@ -1,4 +1,8 @@
 .contact {
+  .container {
+    min-height: 85vh;
+  }
+
   a {
     font-size: clamp(1.8rem, 3vw, 3rem);
     letter-spacing: 5px;

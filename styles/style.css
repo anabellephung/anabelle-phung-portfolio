@@ -313,10 +313,6 @@ section, .wrapper {
   min-width: 75vw;
 }
 
-.container {
-  min-height: 90vh;
-}
-
 input[type="submit"],
 button,
 a {
@@ -940,7 +936,7 @@ nav a .icon {
 }
 
 .box {
-  min-height: 90vh;
+  min-height: 85vh;
   min-width: 75vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1041,6 +1037,10 @@ nav a .icon {
 .modal .close:hover, .modal .close:focus {
   cursor: pointer;
   color: #e68080e8;
+}
+
+.contact .container {
+  min-height: 85vh;
 }
 
 .contact a {
