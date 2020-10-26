@@ -2,7 +2,6 @@
   min-height: 100vh;
   min-width: 75vw;
   @include flex-center-column;
-  background: $primary-dark;
   padding: 20px;
   width: 80%;
 
@@ -12,7 +11,7 @@
     justify-content: space-around;
     
     .white {
-      color: $primary-light;
+      color: $primary-dark;
     }
   }
 
@@ -24,7 +23,7 @@
     padding: 5px;
 
     &::before {
-      box-shadow: 5px 5px 5px $primary-light;
+      box-shadow: 5px 5px 5px $primary-dark;
       padding: 10px;
       border-radius: 10px;
     }
