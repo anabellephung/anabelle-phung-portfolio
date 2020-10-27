@@ -1015,6 +1015,7 @@ nav a .icon {
 }
 
 .modal #caption {
+  color: #f1ebeb;
   display: block;
   margin: 20px 20px 0 20px;
   text-align: center;
