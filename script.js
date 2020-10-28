@@ -1,4 +1,33 @@
 $(function() {
+  // Let user only scroll to center vh of each section
+  $(window).on('resize', function () {
+    if (window.innerWidth >= 500) {
+      $.scrollify({
+        section: 'section',
+        setHeights: false,
+        overflowScroll: false,
+      });
+    }
+  })
+  // Highlight nav link when user is in section;
+  $(window).scroll(function () {
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 150) {
+      $('section').each(function (i) {
+        if ($(this).position().top <= windscroll) {
+          $('.link').removeClass('active');
+          $('.link').eq(i).addClass('active');
+        }
+      });
+
+    } else {
+
+      $('nav').removeClass('fixed');
+      $('nav a.active').removeClass('active');
+      $('nav a:first').addClass('active');
+    }
+
+  }).scroll();
   // Word change animation - homepage
   let words = [
     'developer',

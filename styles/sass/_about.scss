@@ -1,7 +1,7 @@
 .about {
   .contents {
     @include flex-center-column;
-    min-height: 80vh;
+    min-height: 85vh;
     position: relative;
   }
 
@@ -47,7 +47,7 @@
       vertical-align: middle;
       width: 100%;
       border-radius: 5px;
-      height: 150px;
+      height: 100px;
     }
   }
 }

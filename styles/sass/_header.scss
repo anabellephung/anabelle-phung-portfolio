@@ -1,5 +1,17 @@
 header {
   min-width: 25vw;
+  position: fixed;
+  z-index: 20;
+
+  p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 5%;
+    margin: 0 20px;
+    text-shadow: 1px 1px 3px $primary-dark;
+  }
 }
 
 nav {
@@ -68,4 +80,8 @@ nav {
       font-size: 1.8rem;
     }
   }
+}
+
+.active {
+  background: $accent-color;
 }

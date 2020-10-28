@@ -1,31 +1,13 @@
-// @media special for projects
-@media (max-height: 750px) and (min-width: 901px) {
-  .projectBox {
-    .imgThumbnail {
-      width: 250px;
-      height: 150px;
-    }
-  }
-}
-// @media for max-heights
-@media (max-height: 750px) {
-  .calendly {
-    margin: 20px 0;
-  }
-
-  form {
-    margin-bottom: 20px;
-  }
-}
 // @media for max-widths
 @media (max-width: 900px) {
-  body {
-    flex-direction: column;
+  section, 
+  .wrapper {
+    min-width: 100vw;
+    min-height: 85vh;
   }
 
   header {
     min-width: 100%;
-    min-height: 15vh;
     display: block;
   }
 
@@ -51,19 +33,29 @@
     }
   }
 
-  section, .wrapper {
-    min-height: 85vh;
-  }
-
-  section {
-    min-width: 100vw;
-  }
-
   .home {
+    .wrapper {
+      min-height: 100vh;
+    }
+    
     .homepageContents {
+      min-height: 75vh;
+      justify-content: end;
+
       .circleFrame {
-       height: 300px;
+        height: 300px;
       }
+    }
+  }
+
+  .about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    .contents {
+      min-height: 75vh;
     }
   }
 
@@ -73,12 +65,25 @@
     }
   }
 
-  .container {
-    min-height: 75vh;
+  .projects {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    .box {
+      min-height: 85vh;
+    }
   }
 
   .projectBox {
     margin-bottom: 50px;
+  }
+
+  .contact {
+    .container {
+      min-height: 75vh;
+    }
   }
 }
 
@@ -147,6 +152,10 @@
 
 @media (max-width: 460px) {
   header {
+    p {
+      right: 0;
+    }
+
     .hamburger {
       display: block;
     }
@@ -176,7 +185,7 @@
   }
 
   h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .contact {

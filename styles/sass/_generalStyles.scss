@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -8,18 +9,26 @@ body {
   font-size: 1.6rem;
   background: $primary-light;
   color: $primary-dark;
-  display: flex;
 }
 
 .wrapper {
   max-width: 1280px;
   width: 85%;
   margin: 0 auto;
-  min-height: 100vh;
 }
 
 section, .wrapper {
+  min-height: 100vh;
   min-width: 75vw;
+  float: right;
+}
+
+section {
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 input[type="submit"],

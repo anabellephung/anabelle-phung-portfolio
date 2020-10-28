@@ -2,7 +2,7 @@
   min-height: 100vh;
   min-width: 75vw;
   @include flex-center-column;
-  padding: 20px;
+  float: right;
   width: 80%;
 
   .skillColumn {
@@ -37,8 +37,8 @@
   }
 
   p {
-    font-size: clamp(1rem, 3vw, 1.4rem);
-    letter-spacing: 5px;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    letter-spacing: 3px;
     margin-bottom: 2px;
   }
 }
