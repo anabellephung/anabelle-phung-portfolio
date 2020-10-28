@@ -1,6 +1,7 @@
 .contact {
   .container {
-    min-height: 85vh;
+    @include flex-center-column-even;
+    min-height: 90vh;
     margin-top: 20px;
   }
 

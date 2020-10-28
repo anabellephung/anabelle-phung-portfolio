@@ -82,10 +82,6 @@ h2 {
   padding: 5px 0;
 }
 
-.container {
-  @include flex-center-column-even;
-}
-
 .swal-modal {
   background-color: $primary-dark;
   border: 3px double $monochromatic-accent;
