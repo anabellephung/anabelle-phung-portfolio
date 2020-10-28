@@ -1,33 +1,17 @@
 $(function() {
-  // Let user only scroll to center vh of each section
-  $(window).on('resize', function () {
-    if (window.innerWidth >= 500) {
-      $.scrollify({
-        section: 'section',
-        setHeights: false,
-        overflowScroll: false,
-      });
-    }
-  })
   // Highlight nav link when user is in section;
   $(window).scroll(function () {
-    var windscroll = $(window).scrollTop();
-    if (windscroll >= 150) {
-      $('section').each(function (i) {
-        if ($(this).position().top <= windscroll) {
-          $('.link').removeClass('active');
-          $('.link').eq(i).addClass('active');
-        }
-      });
-
-    } else {
-
-      $('nav').removeClass('fixed');
-      $('nav a.active').removeClass('active');
-      $('nav a:first').addClass('active');
-    }
-
-  }).scroll();
+    var position = window.pageYOffset;
+    $('section').each(function () {
+      var target = $(this).offset().top-300;
+      var id = $(this).attr('id');
+      var navLinks = $('.link');
+      if (position >= target) {
+        navLinks.removeClass('active');
+        $('.link[href="#' + id + '"]').addClass('active');
+      }
+    });
+  });
   // Word change animation - homepage
   let words = [
     'developer',
@@ -42,18 +26,18 @@ $(function() {
     });
   }, 2000);
   // Toggle hamburger mobile menu
-  const $hamburger = $('.hamburger');
-  $hamburger.on('click', function() {
-    $hamburger.toggleClass('is-active')
-    $('#menuList').toggleClass('menuToggle');
-  });
+  // const $hamburger = $('.hamburger');
+  // $hamburger.on('click', function() {
+  //   $hamburger.toggleClass('is-active')
+  //   $('#menuList').toggleClass('menuToggle');
+  // });
   // Media query for hamburger mobile menu
-  $(window).on('resize', function () {
-    if (window.innerWidth > 460) {
-      $('#menuList').removeClass('menuToggle');
-      $hamburger.removeClass('is-active')
-    }
-  })
+  // $(window).on('resize', function () {
+  //   if (window.innerWidth > 460) {
+  //     $('#menuList').removeClass('menuToggle');
+  //     $hamburger.removeClass('is-active')
+  //   }
+  // })
   // Formspree contact form - prevent default refresh
   $('#emailForm').on('submit', function (e) {
     e.preventDefault();

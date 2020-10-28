@@ -374,7 +374,7 @@ form button {
 }
 
 h2 {
-  font-size: clamp(3rem, 3vw, 6rem);
+  font-size: clamp(2.3rem, 3vw, 5rem);
   letter-spacing: 7px;
   text-align: center;
   padding: 5px 0;
@@ -616,16 +616,6 @@ nav::before {
           filter: sepia(40%);
 }
 
-nav .hamburger {
-  display: none;
-}
-
-nav .menuToggle {
-  display: block;
-  position: fixed;
-  z-index: 20;
-}
-
 nav ul {
   letter-spacing: 1px;
   border: 0.5px solid #0a0a0a;
@@ -670,7 +660,7 @@ nav a .icon {
 }
 
 .active {
-  background: #e68080e8;
+  background: #e68080e8 !important;
 }
 
 .home .wrapper {
@@ -779,7 +769,7 @@ nav a .icon {
 }
 
 .about ul li {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
   letter-spacing: 2px;
   text-align: center;
   font-weight: 700;
@@ -826,7 +816,7 @@ nav a .icon {
 }
 
 .pineapple {
-  font-size: clamp(2.5rem, 3vw, 4.5rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   position: absolute;
   right: -8%;
   bottom: 0;
@@ -1085,14 +1075,6 @@ nav a .icon {
   text-shadow: 2px 1px 2px #ffc0cb;
 }
 
-.contact .calendly {
-  cursor: pointer;
-  font-size: clamp(1.3rem, 3vw, 2rem);
-  letter-spacing: 5px;
-  margin: 20px 0;
-  border-bottom: 3px dotted #0a0a0a;
-}
-
 .contact .accent {
   color: #e68080e8;
 }
@@ -1169,7 +1151,7 @@ form ul li:nth-child(2) label {
 }
 
 form label {
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   letter-spacing: 8px;
   display: inline-block;
 }
@@ -1211,7 +1193,7 @@ form button {
   section,
   .wrapper {
     min-width: 100vw;
-    min-height: 85vh;
+    min-height: 90vh;
   }
   header {
     min-width: 100%;
@@ -1219,7 +1201,13 @@ form button {
   }
   nav {
     min-width: 0;
-    min-height: 15vh;
+    min-height: 10vh;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+  nav .noMobile {
+    display: none;
   }
   nav::before {
     background-position: 65%;
@@ -1246,7 +1234,7 @@ form button {
     min-height: 100vh;
   }
   .home .homepageContents {
-    min-height: 75vh;
+    min-height: 85vh;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
@@ -1273,24 +1261,10 @@ form button {
   .skills .skillRow {
     width: 100%;
   }
-  .projects {
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  .projects .box {
-    min-height: 85vh;
-  }
-  .projectBox {
-    margin-bottom: 50px;
+  .box {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
   }
   .contact .container {
     min-height: 75vh;
@@ -1304,38 +1278,22 @@ form button {
 }
 
 @media (max-width: 690px) {
-  nav .noMobile {
-    display: none;
-  }
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  nav a {
-    padding: 10px 20px;
-  }
-  nav a .icon {
-    font-size: 2.5rem;
-  }
   .home .homepageContents .circleFrame {
     height: 225px;
   }
-  .column img {
+  .row .column img {
     height: auto;
   }
   form {
-    min-width: 400px;
+    min-width: 300px;
+  }
+  form button {
+    padding: 5px 10px;
   }
   form input,
   form textarea {
     min-width: 300px;
+    padding: 0;
   }
 }
 
@@ -1350,24 +1308,16 @@ form button {
   }
 }
 
+@media (max-width: 500px) {
+  .projectBox {
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 460px) {
   header p {
-    right: 0;
-  }
-  header .hamburger {
-    display: block;
-  }
-  header nav {
-    display: block;
-  }
-  header ul {
-    display: none;
-  }
-  header li {
-    border-bottom: 0.5px solid #0a0a0a;
-  }
-  header li:last-of-type {
-    border-bottom: none;
+    right: 1%;
+    bottom: 0;
   }
   .about ul,
   .about .row {
@@ -1380,7 +1330,7 @@ form button {
     letter-spacing: 2px;
   }
   .contact .socials a {
-    margin: 20px 10px;
+    margin: 10px;
   }
   form {
     min-width: 300px;
@@ -1399,12 +1349,6 @@ form button {
 
 @media (max-width: 414px) {
   .pineapple {
-    right: 30%;
-  }
-}
-
-@media (max-width: 375px) {
-  .pineapple {
-    right: 10%;
+    right: -6%;
   }
 }

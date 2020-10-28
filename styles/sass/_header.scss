@@ -33,16 +33,6 @@ nav {
     filter: sepia(40%);
   }
 
-  .hamburger {
-    display: none;
-  }
-
-  .menuToggle {
-    display: block;
-    position: fixed;
-    z-index: 20;
-  }
-  
   ul {
     letter-spacing: 1px;
     border: 0.5px solid $primary-dark;
@@ -83,5 +73,5 @@ nav {
 }
 
 .active {
-  background: $accent-color;
+  background: $accent-color!important;
 }
