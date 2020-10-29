@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&family=Poppins:ital,wght@0,400;0,600;0,800;1,600&display=swap"
     rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>This is Anabelle Phung.</title>
@@ -74,9 +75,10 @@
     <!-- ABOUT -->
     <section class="about" id="about">
       <div class="wrapper">
+        <div class="shape triangle"></div>
         <h2>Who is Anabelle <span class="color"> Phung</span>?</h2>
   
-        <div class="contents">
+        <div class="contents" data-aos="fade-down">
           <ul>
             <li>She is a <span class="color italic">colored</span>, <span class="color italic">female</span> developer.
             </li>
@@ -134,8 +136,9 @@
     <!-- SKILLS -->
     <section class="skills" id="skills">
       <div class="wrapper">
+        <div class="shape circle"></div>
         <div class="skillRow">
-          <div class="skillColumn">
+          <div class="skillColumn" data-aos="fade-down-right">
             <div class="icon">
               <p>HTML5</p>
               <i class="devicon-html5-plain white"></i>
@@ -162,7 +165,7 @@
             </div>
           </div>
     
-          <div class="skillColumn">
+          <div class="skillColumn" data-aos="fade-down-left">
             <div class="icon">
               <p>Github</p>
               <i class="devicon-github-plain"></i>
@@ -195,8 +198,9 @@
     <!-- PROJECTS -->
     <section class="projects" id="projects">
       <div class="wrapper">
+        <div class="shape trapezoid"></div>
         <div class="box">
-          <div class="projectBox">
+          <div class="projectBox" data-aos="flip-right">
             <h3>Skincare Regime</h3>
             <img class="imgThumbnail" src="./styles/assets/projectCaptures/skincareRegimeQuiz.gif"
               alt="An interactive and dynamic quiz that captures user information with use of radio inputs, and returns a final skincare product. It was created using jQuery, and the products itself were manually appended with research completed online." />
@@ -208,7 +212,7 @@
             </a>
           </div>
     
-          <div class="projectBox">
+          <div class="projectBox" data-aos="flip-right">
             <h3>Come Wine Down</h3>
             <img class="imgThumbnail" src="./styles/assets/projectCaptures/comeWineDown.gif"
               alt="An artistic application that consists of three sections: a youtube music player, an interactive art search box, and a 'sticky thoughts' diary entry. It was created with React and makes use of several API's and Firebase's realtime database." />
@@ -220,7 +224,7 @@
             </a>
           </div>
     
-          <div class="projectBox">
+          <div class="projectBox" data-aos="flip-right">
             <h3>Giphy Sentiment</h3>
             <img class="imgThumbnail" src="./styles/assets/projectCaptures/giphySentiment.gif"
               alt="A fun and friendly application created with React. It uses the GIPHY API and lets the user input the emotion they are feeling that day. The user can then choose a GIF they like, and that GIF will be dynmically added to the '2020 Feels' timeline below, using Firebase's realtime database." />
@@ -237,12 +241,13 @@
             <p id="caption"></p>
           </div>
         </div>
+        <div class="shape oval"></div>
     
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-up" data-aos-duration="3000">
       <div class="wrapper">
         <h2>Let's Connect!</h2>
         <div class="container">
@@ -269,6 +274,7 @@
           </a>
   
           <!-- Formspree -->
+          <div class="shape parallelogram"></div>
           <form id="emailForm">
             <ul>
               <li>
@@ -293,6 +299,7 @@
   </main>
 
   <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="./script.js"></script>
 </body>

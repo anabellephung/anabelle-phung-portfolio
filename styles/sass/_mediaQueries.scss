@@ -73,14 +73,39 @@
     }
   }
 
-  .box {
-    align-items: end;
-  }
-
   .contact {
     .container {
       min-height: 75vh;
     }
+  }
+
+  .triangle {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid #eb9595;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .trapezoid {
+    width: 200px;
+    border-bottom: 150px solid #eb9595;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+  }
+
+  .oval {
+    width: 300px;
+    height: 150px;
+    border-radius: 150px / 75px;
+  }
+
+  .parallelogram {
+    width: 200px;
+    height: 100px;
   }
 }
 

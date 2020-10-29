@@ -1,17 +1,30 @@
 $(function() {
-  // Highlight nav link when user is in section;
-  $(window).scroll(function () {
-    var position = window.pageYOffset;
+  // AOS animations library
+  AOS.init({
+    duration: 1200,
+  })
+  // Highlight nav on scroll
+  function hightlight() {
+    let position = window.pageYOffset;
     $('section').each(function () {
-      var target = $(this).offset().top-300;
-      var id = $(this).attr('id');
-      var navLinks = $('.link');
+      let target = $(this).offset().top - 300;
+      let id = $(this).attr('id');
+      let navLinks = $('.link');
       if (position >= target) {
         navLinks.removeClass('active');
         $('.link[href="#' + id + '"]').addClass('active');
       }
     });
-  });
+  }
+  // Parallax effect on shapes
+  function shapeParallax() {
+    $('.shape').css('margin-top', $(window).scrollTop() * -.3);
+  }
+  // Call animation functions
+  window.onscroll = function () {
+    hightlight();
+    shapeParallax();
+  }
   // Word change animation - homepage
   let words = [
     'developer',
@@ -25,19 +38,6 @@ $(function() {
       $(this).text(words[(i === words.length - 1) ? i = 0 : i += 1]).fadeIn(400);
     });
   }, 2000);
-  // Toggle hamburger mobile menu
-  // const $hamburger = $('.hamburger');
-  // $hamburger.on('click', function() {
-  //   $hamburger.toggleClass('is-active')
-  //   $('#menuList').toggleClass('menuToggle');
-  // });
-  // Media query for hamburger mobile menu
-  // $(window).on('resize', function () {
-  //   if (window.innerWidth > 460) {
-  //     $('#menuList').removeClass('menuToggle');
-  //     $hamburger.removeClass('is-active')
-  //   }
-  // })
   // Formspree contact form - prevent default refresh
   $('#emailForm').on('submit', function (e) {
     e.preventDefault();

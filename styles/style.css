@@ -298,6 +298,7 @@ body {
   font-size: 1.6rem;
   background: #f1ebeb;
   color: #0a0a0a;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -310,6 +311,7 @@ section, .wrapper {
   min-height: 100vh;
   min-width: 75vw;
   float: right;
+  position: relative;
 }
 
 section {
@@ -429,130 +431,57 @@ h2 {
   color: #0a0a0a;
 }
 
-.hamburger {
-  padding: 15px 15px;
-  display: inline-block;
-  -webkit-transition-property: opacity, -webkit-filter;
-  transition-property: opacity, -webkit-filter;
-  transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
-  -webkit-transition-duration: 0.15s;
-          transition-duration: 0.15s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-}
-
-.hamburger:hover {
-  opacity: 0.7;
-}
-
-.hamburger.is-active:hover {
-  opacity: 0.7;
-}
-
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-  background-color: #0a0a0a;
-}
-
-.hamburger-box {
-  width: 40px;
-  height: 24px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-}
-
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 40px;
-  height: 4px;
-  background-color: #0a0a0a;
-  border-radius: 4px;
+.shape {
   position: absolute;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.15s;
-          transition-duration: 0.15s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  z-index: -20;
+  opacity: 0.4;
 }
 
-.hamburger-inner::before, .hamburger-inner::after {
-  content: "";
-  display: block;
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 200px solid #eb9595;
+  right: 10%;
 }
 
-.hamburger-inner::before {
-  top: -10px;
+.circle {
+  background: #eb9595;
+  left: 10%;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
 }
 
-.hamburger-inner::after {
-  bottom: -10px;
+.trapezoid {
+  left: 50%;
+  height: 0;
+  width: 400px;
+  border-bottom: 250px solid #eb9595;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
 }
 
-.hamburger--collapse .hamburger-inner {
-  top: auto;
-  bottom: 0;
-  -webkit-transition-duration: 0.13s;
-          transition-duration: 0.13s;
-  -webkit-transition-delay: 0.13s;
-          transition-delay: 0.13s;
-  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+.oval {
+  background: #eb9595;
+  left: 30%;
+  width: 600px;
+  height: 300px;
+  border-radius: 400px / 200px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
 }
 
-.hamburger--collapse .hamburger-inner::after {
-  top: -20px;
-  -webkit-transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
-  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
-}
-
-.hamburger--collapse .hamburger-inner::before {
-  -webkit-transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--collapse.is-active .hamburger-inner {
-  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
-          transform: translate3d(0, -10px, 0) rotate(-45deg);
-  -webkit-transition-delay: 0.22s;
-          transition-delay: 0.22s;
-  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.hamburger--collapse.is-active .hamburger-inner::after {
-  top: 0;
-  opacity: 0;
-  -webkit-transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
-  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
-}
-
-.hamburger--collapse.is-active .hamburger-inner::before {
-  top: 0;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+.parallelogram {
+  background: #eb9595;
+  left: 10%;
+  width: 350px;
+  height: 250px;
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
 }
 
 header {
@@ -1258,13 +1187,32 @@ form button {
   .skills .skillRow {
     width: 100%;
   }
-  .box {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-  }
   .contact .container {
     min-height: 75vh;
+  }
+  .triangle {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid #eb9595;
+  }
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+  .trapezoid {
+    width: 200px;
+    border-bottom: 150px solid #eb9595;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+  }
+  .oval {
+    width: 300px;
+    height: 150px;
+    border-radius: 150px / 75px;
+  }
+  .parallelogram {
+    width: 200px;
+    height: 100px;
   }
 }
 

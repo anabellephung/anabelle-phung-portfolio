@@ -9,6 +9,7 @@ body {
   font-size: 1.6rem;
   background: $primary-light;
   color: $primary-dark;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -21,6 +22,7 @@ section, .wrapper {
   min-height: 100vh;
   min-width: 75vw;
   float: right;
+  position: relative;
 }
 
 section {
@@ -128,4 +130,54 @@ h2 {
     background-color: $primary-light;
     color: $primary-dark;
   }
+}
+
+.shape {
+  position: absolute;
+  z-index: -20;
+  opacity: 0.4;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 200px solid #eb9595;
+  right: 10%;
+}
+
+.circle {
+  background: #eb9595;
+  left: 10%;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+}
+
+.trapezoid {
+  left: 50%;
+  height: 0;
+	width: 400px;
+  border-bottom: 250px solid #eb9595;
+	border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  transform: rotate(35deg);
+}
+
+.oval {
+  background: #eb9595;
+  left: 30%;
+  width: 600px;
+  height: 300px;
+  border-radius: 400px / 200px;
+  transform: rotate(35deg);
+}
+
+.parallelogram {
+  background: #eb9595;
+  left: 10%;
+  width: 350px;
+  height: 250px;
+  transform: skew(20deg);
 }
