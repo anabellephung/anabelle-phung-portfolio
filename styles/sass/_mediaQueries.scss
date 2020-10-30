@@ -9,6 +9,10 @@
   header {
     min-width: 100vw;
     display: block;
+
+    p {
+      bottom: 0;
+    }
   }
 
   nav {
@@ -169,7 +173,6 @@
   header {
     p {
       right: 1%;
-      bottom: 0;
     }
   }
 
