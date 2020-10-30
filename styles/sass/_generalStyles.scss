@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -9,7 +10,6 @@ body {
   font-size: 1.6rem;
   background: $primary-light;
   color: $primary-dark;
-  overflow-x: hidden;
 }
 
 .wrapper {
