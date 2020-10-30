@@ -819,6 +819,7 @@ nav a .icon {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  overflow-x: hidden;
 }
 
 .skillRow .skillColumn .white {
