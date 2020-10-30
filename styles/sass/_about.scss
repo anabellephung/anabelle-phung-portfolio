@@ -1,7 +1,10 @@
 .about {
+  .wrapper {
+    @include flex-center-column-even
+  }
+
   .contents {
     @include flex-center-column;
-    min-height: 85vh;
     position: relative;
   }
 

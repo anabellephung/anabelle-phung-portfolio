@@ -1,13 +1,9 @@
 .skillRow {
   min-height: 100vh;
-  min-width: 75vw;
   @include flex-center-column;
-  float: right;
-  width: 80%;
 
   .wrap {
     overflow-x: hidden;
-    min-width: 75vw;
   }
 
   .skillColumn {

@@ -298,6 +298,14 @@ body {
   font-size: 1.6rem;
   background: #f1ebeb;
   color: #0a0a0a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -306,15 +314,16 @@ body {
   margin: 0 auto;
 }
 
+main {
+  margin-left: 250px;
+}
+
 section, .wrapper {
   min-height: 100vh;
-  min-width: 75vw;
-  float: right;
-  position: relative;
 }
 
 section {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 section:last-of-type {
@@ -381,55 +390,6 @@ h2 {
   padding: 5px 0;
 }
 
-.swal-modal {
-  background-color: #0a0a0a;
-  border: 3px double #ffc0cb;
-  border-radius: 2px;
-}
-
-.swal-title {
-  margin: 0px;
-  font-size: clamp(1.8rem, 3vw, 2rem);
-  letter-spacing: 5px;
-  color: #f1ebeb;
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
-  margin-bottom: 28px;
-}
-
-.swal-text {
-  background-color: #e68080e8;
-  padding: 17px;
-  font-size: clamp(1.4rem, 3vw, 1.6rem);
-  letter-spacing: 3px;
-  border-radius: 2px;
-  display: block;
-  margin: 22px;
-  text-align: center;
-  color: #0a0a0a;
-}
-
-.swal-footer {
-  background-color: #e68080e8;
-  margin-top: 32px;
-  border-top: 1px solid #e68080e8;
-  overflow: hidden;
-}
-
-.swal-button {
-  padding: 7px 19px;
-  border-radius: 2px;
-  background-color: #0a0a0a;
-  font-size: clamp(1.2rem, 3vw, 1.4rem);
-  letter-spacing: 3px;
-  font-weight: bold;
-}
-
-.swal-button:not([disabled]):hover {
-  background-color: #f1ebeb;
-  color: #0a0a0a;
-}
-
 .shape {
   position: absolute;
   z-index: -20;
@@ -447,61 +407,49 @@ h2 {
 
 .circle {
   background: #eb9595;
-  left: 10%;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 .trapezoid {
   left: 50%;
   height: 0;
-  width: 400px;
-  border-bottom: 250px solid #eb9595;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
+  width: 300px;
+  border-bottom: 200px solid #eb9595;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
 }
 
 .oval {
   background: #eb9595;
-  left: 30%;
-  width: 600px;
-  height: 300px;
-  border-radius: 400px / 200px;
+  width: 450px;
+  height: 225px;
+  border-radius: 300px / 150px;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
+  left: 60%;
 }
 
 .parallelogram {
   background: #eb9595;
   left: 10%;
-  width: 350px;
-  height: 250px;
+  width: 300px;
+  height: 200px;
   -webkit-transform: skew(20deg);
           transform: skew(20deg);
 }
 
 header {
-  min-width: 25vw;
+  height: 100%;
+  width: 250px;
   position: fixed;
   z-index: 20;
-}
-
-header p {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  position: absolute;
-  bottom: 5%;
-  margin: 0 20px;
-  text-shadow: 1px 1px 3px #0a0a0a;
-}
-
-nav {
-  min-height: 100vh;
-  min-width: 25vw;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,10 +459,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
-nav::before {
+header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -526,6 +473,16 @@ nav::before {
   background-size: cover;
   -webkit-filter: sepia(40%);
           filter: sepia(40%);
+}
+
+header p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  text-shadow: 1px 1px 3px #0a0a0a;
 }
 
 nav ul {
@@ -646,6 +603,22 @@ nav a .icon {
   width: 169px;
 }
 
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .about .contents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -660,7 +633,6 @@ nav a .icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 85vh;
   position: relative;
 }
 
@@ -792,7 +764,6 @@ nav a .icon {
 
 .skillRow {
   min-height: 100vh;
-  min-width: 75vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -806,13 +777,10 @@ nav a .icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  float: right;
-  width: 80%;
 }
 
 .skillRow .wrap {
   overflow-x: hidden;
-  min-width: 75vw;
 }
 
 .skillRow .skillColumn {
@@ -869,27 +837,35 @@ nav a .icon {
   margin-bottom: 2px;
 }
 
+.projects .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .box {
-  min-height: 100vh;
-  min-width: 75vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .projectBox {
   text-align: center;
+  margin: 0 20px;
 }
 
 .projectBox h3 {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 3vw, 2rem);
   margin-bottom: 10px;
   letter-spacing: 5px;
 }
@@ -954,7 +930,7 @@ nav a .icon {
   display: block;
   margin: 20px 20px 0 20px;
   text-align: center;
-  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
   letter-spacing: 3px;
 }
 
@@ -982,18 +958,16 @@ nav a .icon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   min-height: 90vh;
-  margin-top: 20px;
 }
 
 .contact a {
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-size: clamp(1.6rem, 3vw, 2rem);
   letter-spacing: 5px;
   margin-bottom: 5px;
   color: #0a0a0a;
@@ -1081,7 +1055,7 @@ form ul li:nth-child(2) label {
 }
 
 form label {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   letter-spacing: 8px;
   display: inline-block;
 }
@@ -1089,7 +1063,7 @@ form label {
 form input,
 form textarea {
   min-width: 400px;
-  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
   letter-spacing: 5px;
   border: 3px double #0a0a0a;
   background: #f1ebeb;
@@ -1117,33 +1091,68 @@ form button {
   margin-top: 15px;
 }
 
+.swal-modal {
+  background-color: #0a0a0a;
+  border: 3px double #ffc0cb;
+  border-radius: 2px;
+}
+
+.swal-title {
+  margin: 0px;
+  font-size: clamp(1.8rem, 3vw, 2rem);
+  letter-spacing: 5px;
+  color: #f1ebeb;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin-bottom: 28px;
+}
+
+.swal-text {
+  background-color: #e68080e8;
+  padding: 17px;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  letter-spacing: 3px;
+  border-radius: 2px;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #0a0a0a;
+}
+
+.swal-footer {
+  background-color: #e68080e8;
+  margin-top: 32px;
+  border-top: 1px solid #e68080e8;
+  overflow: hidden;
+}
+
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #0a0a0a;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #f1ebeb;
+  color: #0a0a0a;
+}
+
 @media (max-width: 900px) {
-  section,
-  .wrapper {
-    min-width: 100vw;
-    min-height: 90vh;
-  }
   header {
-    min-width: 100vw;
-    display: block;
+    width: 100%;
+    height: 80px;
+  }
+  header::before {
+    background-position: 65%;
   }
   header p {
     bottom: 0;
+    left: revert;
   }
-  nav {
-    min-width: 0;
-    min-height: 10vh;
-  }
-  nav a {
-    font-size: 1rem;
-  }
-  nav .noMobile {
-    display: none;
-  }
-  nav::before {
-    background-position: 65%;
-  }
-  nav ul {
+  header ul {
     margin-left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1155,26 +1164,24 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  nav li {
+  header ul li {
     border-bottom: none;
   }
-  nav a {
+  header ul a {
+    font-size: 1rem;
     padding: 10px 20px;
   }
-  .home .wrapper {
-    min-height: 100vh;
+  header ul .noMobile {
+    display: none;
   }
-  .home .homepageContents {
-    min-height: 85vh;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+  main {
+    margin-left: 0;
+    margin-top: 80px;
   }
   .home .homepageContents .circleFrame {
     height: 300px;
   }
-  .about {
-    min-height: 100vh;
+  .contact .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1182,18 +1189,28 @@ form button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  .about .contents {
-    min-height: 75vh;
-  }
-  .skills .skillRow {
-    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contact .container {
-    min-height: 75vh;
+    min-height: 65vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .triangle {
     border-left: 50px solid transparent;
@@ -1248,12 +1265,9 @@ form button {
 }
 
 @media (max-width: 550px) {
-  .about .contents {
-    min-height: 70vh;
-  }
   .skills .skillRow .icon {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     margin: 5px;
   }
 }
@@ -1265,14 +1279,8 @@ form button {
 }
 
 @media (max-width: 460px) {
-  header p {
-    right: 1%;
-  }
   .about ul,
   .about .row {
-    margin-bottom: 20px;
-  }
-  h2 {
     margin-bottom: 20px;
   }
   .contact a {
@@ -1280,9 +1288,6 @@ form button {
   }
   .contact .socials a {
     margin: 10px;
-  }
-  form {
-    min-width: 300px;
   }
   form li {
     -webkit-box-align: center;
