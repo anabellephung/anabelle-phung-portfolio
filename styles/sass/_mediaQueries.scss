@@ -45,11 +45,15 @@
 
   .contact {
     .wrapper {
-      @include flex-center-column-even;
+      @include flex-center-column-end;
+    }
+
+    h2 {
+      margin-bottom: 20px;
     }
 
     .container {
-      min-height: 65vh;
+      min-height: 75vh;
       @include flex-center-column-between;
     }
   }
