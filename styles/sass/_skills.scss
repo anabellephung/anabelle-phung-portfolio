@@ -4,12 +4,12 @@
   @include flex-center-column;
   float: right;
   width: 80%;
+  overflow-x: hidden;
 
   .skillColumn {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    overflow-x: hidden;
     
     .white {
       color: $primary-dark;
