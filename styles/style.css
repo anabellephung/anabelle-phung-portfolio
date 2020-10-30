@@ -298,7 +298,6 @@ body {
   font-size: 1.6rem;
   background: #f1ebeb;
   color: #0a0a0a;
-  overflow-x: hidden;
 }
 
 .wrapper {
@@ -809,6 +808,9 @@ nav a .icon {
           align-items: center;
   float: right;
   width: 80%;
+}
+
+.skillRow .wrap {
   overflow-x: hidden;
 }
 

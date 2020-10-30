@@ -4,8 +4,11 @@
   @include flex-center-column;
   float: right;
   width: 80%;
-  overflow-x: hidden;
 
+  .wrap {
+    overflow-x: hidden;
+  }
+  
   .skillColumn {
     display: flex;
     flex-wrap: wrap;
