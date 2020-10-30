@@ -316,6 +316,7 @@ body {
 
 main {
   margin-left: 250px;
+  overflow-x: hidden;
 }
 
 section, .wrapper {
