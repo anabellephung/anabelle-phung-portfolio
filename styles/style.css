@@ -290,7 +290,6 @@ img {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -813,6 +812,7 @@ nav a .icon {
 
 .skillRow .wrap {
   overflow-x: hidden;
+  min-width: 75vw;
 }
 
 .skillRow .skillColumn {

@@ -7,8 +7,9 @@
 
   .wrap {
     overflow-x: hidden;
+    min-width: 75vw;
   }
-  
+
   .skillColumn {
     display: flex;
     flex-wrap: wrap;
