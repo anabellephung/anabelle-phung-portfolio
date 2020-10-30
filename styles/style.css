@@ -1122,7 +1122,7 @@ form button {
     min-height: 90vh;
   }
   header {
-    min-width: 100%;
+    min-width: 100vw;
     display: block;
   }
   nav {
