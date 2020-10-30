@@ -298,6 +298,7 @@ body {
   font-size: 1.6rem;
   background: #f1ebeb;
   color: #0a0a0a;
+  overflow-x: hidden;
 }
 
 .wrapper {
