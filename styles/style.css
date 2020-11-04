@@ -443,13 +443,9 @@ h2 {
 }
 
 header {
+  position: fixed;
   height: 100%;
   width: 250px;
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,6 +479,11 @@ header p {
   bottom: 5%;
   left: 10%;
   text-shadow: 1px 1px 3px #0a0a0a;
+}
+
+nav {
+  position: fixed;
+  z-index: 20;
 }
 
 nav ul {
@@ -1142,6 +1143,7 @@ form button {
 
 @media (max-width: 900px) {
   header {
+    position: relative;
     width: 100%;
     height: 80px;
   }
@@ -1177,6 +1179,9 @@ form button {
   main {
     margin-left: 0;
     margin-top: 80px;
+  }
+  section, .wrapper {
+    min-height: 85vh;
   }
   .home .homepageContents .circleFrame {
     height: 300px;

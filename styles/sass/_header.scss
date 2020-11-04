@@ -1,14 +1,10 @@
 header {
+  position: fixed;
   height: 100%;
   width: 250px;
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
   @include flex-center-row;
-
-  &::before {
+  
+   &::before {
     content: '';
     position: absolute;
     top: 0;
@@ -33,6 +29,9 @@ header {
 }
 
 nav {
+  position: fixed;
+  z-index: 20;
+
   ul {
     letter-spacing: 1px;
     border: 0.5px solid $primary-dark;
