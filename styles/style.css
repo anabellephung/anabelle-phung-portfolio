@@ -862,11 +862,16 @@ nav a .icon {
 
 .projectBox {
   text-align: center;
-  margin: 0 20px;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #0a0a0a;
+  background: url(https://media.giphy.com/media/JmO5i65cwf8nML7Z0v/giphy.gif) center;
+  background-color: #f1ebeb;
+  -webkit-box-shadow: 0 2px 2px #0a0a0a;
+          box-shadow: 0 2px 2px #0a0a0a;
 }
 
 .projectBox h3 {
-  font-size: clamp(1.6rem, 3vw, 2rem);
   margin-bottom: 10px;
   letter-spacing: 5px;
 }
@@ -874,11 +879,11 @@ nav a .icon {
 .projectBox .imgThumbnail {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
-  border-radius: 5px;
+  border: 1px solid #0a0a0a;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 250px;
-  height: 175px;
+  height: 150px;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
