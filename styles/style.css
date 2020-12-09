@@ -1309,4 +1309,11 @@ form button {
   .pineapple {
     right: -6%;
   }
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+  .trapezoid {
+    left: 25%;
+  }
 }
